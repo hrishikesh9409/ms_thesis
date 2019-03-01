@@ -1,22 +1,9 @@
 \contentsline {section}{Abstract}{iii}{Doc-Start}
 \contentsline {section}{Acknowledgements}{v}{section*.1}
-\contentsline {section}{List of Tables}{ix}{section*.4}
-\contentsline {section}{List of Figures}{x}{section*.6}
+\contentsline {section}{List of Tables}{viii}{section*.4}
+\contentsline {section}{List of Figures}{ix}{section*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Related Work}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Pre-Modern Disaster Preparedness, Management and Relief Techniques}{7}{section.2.1}
 \contentsline {section}{\numberline {2.2}Routing Algorithms and IoT Based Evacuation Management}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Simulation Tools and Conditions}{12}{section.2.3}
-\contentsline {chapter}{\numberline {3}Usage}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}Options}{14}{section.3.1}
-\contentsline {chapter}{\numberline {4}Conclusion}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Future Work}{17}{section.4.1}
-\contentsline {chapter}{\numberline {A}Implementation Details}{18}{appendix.A}
-\contentsline {section}{\numberline {A.1}Switching Formats}{18}{section.A.1}
-\contentsline {section}{\numberline {A.2}Long Tables}{18}{section.A.2}
-\contentsline {section}{\numberline {A.3}Booktabs}{19}{section.A.3}
-\contentsline {section}{\numberline {A.4}Bibliography and Footnotes}{20}{section.A.4}
-\contentsline {section}{\numberline {A.5}Figures and Tables}{20}{section.A.5}
-\contentsline {chapter}{\numberline {B}Printing and Binding}{21}{appendix.B}
-\contentsline {section}{\numberline {B.1}Printing}{21}{section.B.1}
-\contentsline {section}{\numberline {B.2}Binding}{22}{section.B.2}
+\contentsline {section}{\numberline {2.3}Simulation Tools and Constraints}{12}{section.2.3}
