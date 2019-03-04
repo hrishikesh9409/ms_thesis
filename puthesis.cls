@@ -71,7 +71,7 @@
   \extravspace{.6in}
   \begin{center}
     \@author \\
-    Mahyar Moghaddam
+   Matriculation Number : 255670
   \end{center}
   \vspace{.6in}
   \extravspace{.6in}
@@ -88,7 +88,8 @@
     % Recommended for Acceptance \\
     % by the \@deptpref \\
     % \@dept \\
-    Adviser: \@adviser
+    Adviser: \@adviser \\
+    Co-Supervisor: Mahyar Moghaddam
   \end{center}
   \vspace{.3in}
   \extravspace{.3in}

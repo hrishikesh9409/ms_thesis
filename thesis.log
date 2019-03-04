@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  1 MAR 2019 23:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  5 MAR 2019 00:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -501,32 +501,108 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (./ch-intro/chapter-intro.tex
 Chapter 1.
 
-LaTeX Warning: Citation `inproceedings' on page 1 undefined on input line 4.
+LaTeX Warning: Citation `ref1' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `ref2' on page 1 undefined on input line 4.
 
 [1
 
 
 
 
-] (./ch-intro/intro_contributions.tex [2] [3] [4]
+] (./ch-intro/intro_contributions.tex
+
+LaTeX Warning: Citation `ref1' on page 2 undefined on input line 4.
+
+
+LaTeX Warning: Citation `ref3' on page 2 undefined on input line 12.
+
+
+LaTeX Warning: Citation `ref4' on page 2 undefined on input line 12.
+
+[2] [3] [4]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
- [5])) [6]
+
+
+LaTeX Warning: Citation `ref5' on page 5 undefined on input line 29.
+
+[5])) [6] [7]
 \openout2 = `ch-pastwork/chapter-pastwork.aux'.
 
-
-(./ch-pastwork/chapter-pastwork.tex
+ (./ch-pastwork/chapter-pastwork.tex
 Chapter 2.
-(./ch-pastwork/topic1.tex [7
+(./ch-pastwork/topic1.tex
+
+LaTeX Warning: Citation `ref6' on page 8 undefined on input line 4.
+
+
+LaTeX Warning: Citation `ref7' on page 8 undefined on input line 6.
+
+
+LaTeX Warning: Citation `ref8' on page 8 undefined on input line 6.
+
+
+LaTeX Warning: Citation `ref9' on page 8 undefined on input line 6.
+
+[8
 
 
 
-]) (./ch-pastwork/topic2.tex [8] [9] [10] [11])
-(./ch-pastwork/topic3.tex [12] [13])) [14]
+]
+
+LaTeX Warning: Citation `ref10' on page 9 undefined on input line 8.
+
+) (./ch-pastwork/topic2.tex [9]
+
+LaTeX Warning: Citation `ref11' on page 10 undefined on input line 6.
+
+
+LaTeX Warning: Citation `ref12' on page 10 undefined on input line 6.
+
+[10]
+
+LaTeX Warning: Citation `ref13' on page 11 undefined on input line 8.
+
+
+LaTeX Warning: Citation `ref14' on page 11 undefined on input line 12.
+
+
+LaTeX Warning: Citation `ref5' on page 11 undefined on input line 12.
+
+
+LaTeX Warning: Citation `ref15' on page 11 undefined on input line 12.
+
+
+LaTeX Warning: Citation `ref16' on page 11 undefined on input line 12.
+
+[11]
+
+LaTeX Warning: Citation `ref17' on page 12 undefined on input line 15.
+
+
+LaTeX Warning: Citation `ref18' on page 12 undefined on input line 15.
+
+
+LaTeX Warning: Citation `ref19' on page 12 undefined on input line 15.
+
+[12]) (./ch-pastwork/topic3.tex
+
+LaTeX Warning: Citation `ref20' on page 13 undefined on input line 4.
+
+
+LaTeX Warning: Citation `ref21' on page 13 undefined on input line 6.
+
+[13]
+
+LaTeX Warning: Citation `ref22' on page 14 undefined on input line 8.
+
+[14])) [15]
 No file thesis.bbl.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
@@ -535,7 +611,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: E2B45F9D4EE3EC33B86427A9E496B503;641.
+(rerunfilecheck)             Checksum: 1E0D356487BE47D99247CB09B83DE337;987.
 
 
 LaTeX Warning: There were undefined references.
@@ -543,21 +619,21 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
  ) 
 Here is how much of TeX's memory you used:
- 7090 strings out of 493029
- 102206 string characters out of 6136234
- 194607 words of memory out of 5000000
- 10430 multiletter control sequences out of 15000+600000
+ 7127 strings out of 493029
+ 102614 string characters out of 6136234
+ 196087 words of memory out of 5000000
+ 10461 multiletter control sequences out of 15000+600000
  10406 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,6n,30p,2136b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,30p,2131b,383s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on thesis.pdf (23 pages, 94557 bytes).
+Output written on thesis.pdf (24 pages, 97849 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 214 PDF objects out of 1000 (max. 8388607)
+ 182 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

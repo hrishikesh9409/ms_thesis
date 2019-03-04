@@ -68,19 +68,19 @@
     % See p.105 of "TeX Unbound" for suggested values.
     % See pp. 199-200 of Lamport's "LaTeX" book for details.
     %   General parameters, for ALL pages:
-    \renewcommand{\topfraction}{0.85}   % max fraction of floats at top
-    \renewcommand{\bottomfraction}{0.6} % max fraction of floats at bottom
+    \renewcommand{\topfraction}{0.85}	% max fraction of floats at top
+    \renewcommand{\bottomfraction}{0.6}	% max fraction of floats at bottom
     %   Parameters for TEXT pages (not float pages):
     \setcounter{topnumber}{2}
     \setcounter{bottomnumber}{2}
     \setcounter{totalnumber}{4}     % 2 may work better
     \setcounter{dbltopnumber}{2}    % for 2-column pages
-    \renewcommand{\dbltopfraction}{0.66}    % fit big float above 2-col. text
-    \renewcommand{\textfraction}{0.15}  % allow minimal text w. figs
+    \renewcommand{\dbltopfraction}{0.66}	% fit big float above 2-col. text
+    \renewcommand{\textfraction}{0.15}	% allow minimal text w. figs
     %   Parameters for FLOAT pages (not text pages):
-    \renewcommand{\floatpagefraction}{0.66} % require fuller float pages
-    % N.B.: floatpagefraction MUST be less than topfraction !!
-    \renewcommand{\dblfloatpagefraction}{0.66}  % require fuller float pages
+    \renewcommand{\floatpagefraction}{0.66}	% require fuller float pages
+	% N.B.: floatpagefraction MUST be less than topfraction !!
+    \renewcommand{\dblfloatpagefraction}{0.66}	% require fuller float pages
 
 % The documentclass already sets parameters to make a high penalty for widows and orphans. 
 
@@ -168,7 +168,7 @@
 
 % create an environment that will indent text
 % see: http://latex.computersci.org/Reference/ListEnvironments
-%   \raggedright makes them left aligned instead of justified
+% 	\raggedright makes them left aligned instead of justified
 \newenvironment{indenttext}{
     \begin{list}{}{ \itemsep 0in \itemindent 0in
     \labelsep 0in \labelwidth 0in
@@ -182,7 +182,7 @@
   {\end{list}}
 
 % another environment that's an indented list, with no spaces between items -- if we want multiple items/lines. Useful in tables. Use \item inside the environment.
-%   \raggedright makes them left aligned instead of justified
+% 	\raggedright makes them left aligned instead of justified
 \newenvironment{indentlist}{
     \begin{list}{}{ \itemsep 0in \itemindent 0in
     \labelsep 0in \labelwidth 0in
@@ -222,7 +222,7 @@
 \input{acknowledgements}
 }
 
-\dedication{To my parents.}
+\dedication{To my parents, \\ I am grateful to my parents for all their undying love and support through the challenges I face. I am the person I am today because of them. I shall always cherish their wisdom and presence in my life.}
 
 \fi  % disable frontmatter
 
