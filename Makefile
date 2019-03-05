@@ -5,11 +5,10 @@ all:
 	pdflatex $(FILENAME).tex
 
 run:
+	bibtex $(FILENAME)
 	pdflatex $(FILENAME).tex
-	pdflatex $(FILENAME).tex
-	biber $(FILENAME)
 	pdflatex $(FILENAME).tex
 
 clean:
-	rm $(FILENAME).log $(FILENAME).aux
+	rm $(FILENAME).log $(FILENAME).aux *.lof *.blg *.toc *.out *.lot
 

@@ -1,0 +1,25 @@
+
+\chapter{PedSim Environment and Setup\label{ch:PedSim Environment and Setup}}
+
+This section briefly explains the underlying PedSim library modules and the basic algorithm that is presented in \cite{ref5}, based on which more constraints were added for realism and optimization; used for the simulation of pedastrian agents. The following subsections will describe the environment and the topology of the building, the algorithm that is used for the movement of participating human agents and the necessary changes that were made to make the algorithm more realistic and the technical implementation details of the PedSim simulation environment. 
+
+\section{Scenario Description}
+\label{sec:implementation:Scenario Description}
+
+The work involves simulation of level 3 of Coppito 0 building during a disaster scenario such as a fire. The building topology consists of 26 rooms and cubicles connected by several hallways and pathways for exit and is depicted in \ref{Coppito0 layout}. There are four exits in total. Two in the middle top and bottom denoted by a the red font as \textbf{E} and \textbf{E}\textbf{"}. There are two more on the left and right which is depicted by \textbf{E}\textbf{'} and \textbf{E}\textbf{'''} also in red. The entire premises is divided into cells which form the basic unit of analysis. Each room is made up of one or more cells. For instance the room at the top left corner is made up of cells 96 and 97. Dark blue lines indicate wall boundaries. Each cell for our scenario has a dimension of 4.5x3 in meters. The doorways provide a separation of 1 meter each. Roughly at the center of the building, two conference rooms and a hallway provides a substantial gathering area.
+
+The work here caters to simulating the flow of crowd during the event of a fire across the four exits. Restrictions such as exit clogging due to intense smoke/fire can be imposed redirecting most of the traffic across specific other exits. Also crowds from crowded exits can be siphoned off by redirecting them to an alternative less crowded exit. The data flow density of population which used for simulation in Pedsim is measured using an IoT framework of smartphones, cameras, RFID’s and motion sensors that enable localization of victims in the room. The tool was thus used as a framework to simulate evacuation algorithms in Coppito 0. 
+
+The given figure \ref{Coppito0 layout} is the graphical description of Coppito 0 building and is referred from the outline and scenario as stated in \cite{ref5}.  
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{implementation/coppito0.JPG}
+	\caption{Coppito 0 Topological Layout}
+  \label{Coppito0 layout}
+\end{figure}
+
+A detailed description of adaptation of the tool to suit the given scenario is described in the next section.
+
+\input{ch-implementation/usage_options} 
+

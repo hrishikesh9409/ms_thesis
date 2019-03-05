@@ -27,29 +27,22 @@
 
 \usepackage{color}
 \usepackage{url}
-
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{algorithm,algpseudocode}
 \usepackage{enumerate}
 \usepackage{multirow}
 \usepackage{dirtytalk}
 \usepackage{balance}
-
-\newcommand{\mahyar}[1]{\textcolor{blue}{{#1}}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-
-
+\usepackage{graphicx}
+\usepackage{enumitem}
+\graphicspath{{/home/hrishi/work/thesis/pictures/}}
 
 
 \title{ Comparative Analysis between Micro and Macro Agent Evacuation Using PedSim Simulator   }
+
+% \begin{document}
+% \includegraphics{laquila}
+
 
 \submitted{March 2019}  % degree conferral date (January, April, June, September, or November)
 \copyrightyear{2019}  % year in which the copyright is secured by publication of the dissertation.
@@ -57,6 +50,8 @@
 \adviser{Professor Henry Muccini}  %replace with the full name of your adviser
 %\departmentprefix{Program in}  % defaults to "Department of", but programs need to change this.
 \department{Informatics}
+
+% \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Tweak float placements
@@ -222,7 +217,7 @@
 \input{acknowledgements}
 }
 
-\dedication{To my parents, \\ I am grateful to my parents for all their undying love and support through the challenges I face. I am the person I am today because of them. I shall always cherish their wisdom and presence in my life.}
+\dedication{To my parents and my dear brother, \newline I am grateful for your undying love and support through the challenges I face. I am the person I am today because of you. I shall always cherish your wisdom and presence in my life.}
 
 \fi  % disable frontmatter
 
@@ -258,7 +253,7 @@
 % \include lets us split up the document (and each include starts a new page):
 \include{ch-intro/chapter-intro}
 \include{ch-pastwork/chapter-pastwork}
-% \include{ch-usage/chapter-usage}
+\include{ch-implementation/chapter-implementation}
 % \include{ch-conclusion/chapter-conclusion}
 % \appendix % all chapters following will be labeled as appendices
 % \include{ch-appendicies/implementation}
