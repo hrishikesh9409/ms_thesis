@@ -5,7 +5,7 @@ This chapter is intended to provide the experimental proof of the contribution. 
 \section{Optimization through Constraints}
 \label{sec: Optimization through Constraints}
 
-From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for agent occupancy, flow control and cell capacity is discussed. However these conditions are hardly realistic when compared to modelling a real crowd of agents. In realistic scenarios, groups of people have altered behavior, confusion panic etc. There will be different forms of social constraints, varying movement speeds, and due to the impaired cognition, perceptions can change leading to different decisions that are made during a catastrophe. To model some of these realistic scenarios, it became evident that the inclusion of certain more properties to the scenario was mandatory. The following conditions as mentioned in sub-section \ref{sec:intro:Objectives and Approach} is analyzed here:
+From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for agent occupancy, flow control and cell capacity is discussed. However these conditions are hardly realistic when compared to modelling a real crowd of agents. In realistic scenarios, groups of people have altered behavior, confusion panic etc. There will be different forms of social constraints, varying movement speeds, and due to the impaired cognition, perceptions can change leading to different decisions that are made during a catastrophe. To model some of these realistic scenarios, it became evident that the inclusion of certain more properties to the scenario was mandatory. The following conditions as mentioned in section \ref{sec:intro:Objectives and Approach} is analyzed here:
 
 \begin{enumerate}
   \item Cell capacity specification by defining social distances
@@ -14,7 +14,7 @@ From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for 
   \end{itemize}
   \item Definition of total area capacity and doors flow capacity constraints -congestion control
   \begin{itemize}
-  	\item The algorithm presented in sub-section \ref{sec: Algorithm Description} unfortunately does not handle congestion. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
+  	\item The algorithm presented in section \ref{sec: Algorithm Description} unfortunately does not handle congestion. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
   \end{itemize}
   \item Simulating social attachment among some agents
   \begin{itemize}
@@ -22,11 +22,21 @@ From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for 
   \end{itemize}
   \item Setting the speed accordingly for various groups
   \begin{itemize}
-  	\item By default PedSim models for microscopic agents and hence the entirety of the agents are considered as a single group. The movement speed for these agents are varied across a distribution and the average speed set for the microscopic group of agents. By setting a variable speed constraint and with the introduction of groups, we model PedSim to cater for macro and micro agent simulation and thus support varying speeds according to the different group formations that can be defined during the simulation. In other words $v_max$ is not fixed across all agents.
+  	\item By default PedSim models for microscopic agents and hence the entirety of the agents are considered as a single group. The movement speed for these agents are varied across a distribution and the average speed set for the microscopic group of agents. By setting a variable speed constraint and with the introduction of groups, we model PedSim to cater for macro and micro agent simulation and thus support varying speeds according to the different group formations that can be defined during the simulation. In other words $v_{max}$ is not fixed across all agents.
   \end{itemize}
 \end{enumerate}
 
-The PedSim library is extended to be inclusive of the algorithm from the sub-section \ref{sec: Algorithm Description} and the aforementioned constraints in order to simulate the various scenarios for micro and macro agents. The following sub-section provides a detailed analysis of the various scenarios that are simulated within the PedSim environment.  
+The PedSim library is extended to be inclusive of the algorithm from the section \ref{sec: Algorithm Description} and the aforementioned constraints in order to simulate the various scenarios for micro and macro agents. The following section provides a detailed analysis of the various scenarios that are simulated within the PedSim environment.  
 
 \section{Simulation and Scenario Analysis}
+\label{sec: Simulation and Scenario Analysis}
+
+This section contains the experimental analysis based on the scenarios that are presented in the forthcoming subsections. It must be noted that the following simulations are run on a PC with the following specifications - Ubuntu 18.04, 8 GB ram, and a 2.5 ghz processor. A series of subsections is present in this section - each representing a particular scenario for simulation. The scenario will be described and the corresponding tabular observations and graph is then presented. 
+
+There are some properties that are common to scenarios. We follow similar topological constraints as given in \cite{ref5}. For instance, in the previous work presented, the cells are assumed to be isometric, i.e. the cells are bi-directional and can be crossed from any direction with the same amount of time. In the scenarios presented, the cells are assumed to be isometric as well.
+
+Acoording to Daamen et al. \cite{ref23}, the door capacities based on varying stress and composition levels of agents present and proposes an average of 2.8 persons per second for a 1 meter wide door $(p/m/s)$. 
+In order to perform a statistical analysis and to remain coherent with the results with from \cite{ref5}, the door capacities and cell capacities are modeled after the presented stats in the aforementioned work. According to 
+
+\subsection{}
 \label{sec: Simulation and Scenario Analysis}

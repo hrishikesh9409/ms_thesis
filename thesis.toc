@@ -20,4 +20,5 @@
 \contentsline {chapter}{\numberline {4}Experimentation and Analysis}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}Optimization through Constraints}{32}{section.4.1}
 \contentsline {section}{\numberline {4.2}Simulation and Scenario Analysis}{34}{section.4.2}
-\contentsline {chapter}{Bibliography}{35}{section*.8}
+\contentsline {subsection}{\numberline {4.2.1}}{35}{subsection.4.2.1}
+\contentsline {chapter}{Bibliography}{36}{section*.8}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  6 MAR 2019 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  6 MAR 2019 20:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,7 +386,11 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 104.
 (./thesis.aux (./ch-intro/chapter-intro.aux)
 (./ch-pastwork/chapter-pastwork.aux)
 (./ch-implementation/chapter-implementation.aux)
-(./ch-experimentation/chapter-experimentation.aux))
+(./ch-experimentation/chapter-experimentation.aux
+
+LaTeX Warning: Label `sec: Simulation and Scenario Analysis' multiply defined.
+
+))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
@@ -403,8 +407,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
 LaTeX Font Info:    ... okay on input line 224.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
 LaTeX Font Info:    ... okay on input line 224.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count132
 \scratchdimen=\dimen135
@@ -523,7 +526,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=213, 620.3175
+</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=218, 620.3175
 pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/clutter.png Graphic file
  (type png)
@@ -559,7 +562,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=311, 863.475
+</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=316, 863.475
 94pt x 586.44093pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0.JPG Graphic fil
 e (type jpg)
@@ -694,7 +697,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=370,
+</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=375,
  620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0building.png Gra
 phic file (type png)
@@ -706,7 +709,7 @@ to0building.png used on input line 97.
 
 [23]
 </home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=38
-0, 620.3175pt x 971.12813pt>
+5, 620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/simulationinaction.png G
 raphic file (type png)
 
@@ -717,7 +720,7 @@ ationinaction.png used on input line 104.
 
 [24 </home/hrishi/work/thesis/pictures/implementation/coppito0building.png>]
 [25 </home/hrishi/work/thesis/pictures/implementation/simulationinaction.png>]
-</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=393, 
+</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=398, 
 196.735pt x 188.705pt>
 File: /home/hrishi/work/thesis/pictures/implementation/variableOptions.png Grap
 hic file (type png)
@@ -736,7 +739,7 @@ Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
 [27] [28] [29]
-</home/hrishi/work/thesis/pictures/implementation/block.png, id=431, 737.00343p
+</home/hrishi/work/thesis/pictures/implementation/block.png, id=436, 737.00343p
 t x 435.12563pt>
 File: /home/hrishi/work/thesis/pictures/implementation/block.png Graphic file (
 type png)
@@ -755,37 +758,48 @@ Chapter 4.
 
 
 
-] [33]) [34] (./thesis.bbl
+] [33]
+
+LaTeX Warning: Citation `ref23' on page 34 undefined on input line 38.
+
+[34]) [35] (./thesis.bbl
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [35
+ [36
 
 
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
- [36]
+ [37]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
- (./thesis.aux
-(./ch-intro/chapter-intro.aux) (./ch-pastwork/chapter-pastwork.aux)
+ (./thesis.aux (./ch-intro/chapter-intro.aux) (./ch-pastwork/chapter-pastwork.a
+ux)
 (./ch-implementation/chapter-implementation.aux)
 (./ch-experimentation/chapter-experimentation.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: FD5B664F74677CB2847243104680AEEE;1621.
+(rerunfilecheck)             Checksum: ECC10134AEC18C12CB738D314767D0FA;1681.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 7626 strings out of 493029
- 111584 string characters out of 6136234
- 204959 words of memory out of 5000000
- 10798 multiletter control sequences out of 15000+600000
- 10753 words of font info for 40 fonts, out of 8000000 for 9000
+ 7632 strings out of 493029
+ 111665 string characters out of 6136234
+ 204973 words of memory out of 5000000
+ 10802 multiletter control sequences out of 15000+600000
+ 11358 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,7n,30p,2134b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -798,10 +812,10 @@ s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb>
-Output written on thesis.pdf (46 pages, 1054555 bytes).
+Output written on thesis.pdf (47 pages, 1057312 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 487 compressed objects within 5 object streams
- 169 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 171 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 
