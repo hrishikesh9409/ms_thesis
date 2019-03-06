@@ -1,22 +1,6 @@
-% ****************************************************************************************** % Dissertation template and document class for Princeton University
-% Author  : Jeffrey Scott Dwoskin <jdwoskin@princeton.edu>
-% Adapted from: http://www.math.princeton.edu/graduate/tex/puthesis.html
-% ****************************************************************************************** %
-
-
-%%% For print copies
-%% set 'singlespace' option to set entire thesis to single space, and define "\printmode" to remove all hyperlinks for printed copies of the thesis. Delete all output files before changing this mode -- it will turn hyperref package on and off
-%\documentclass[12pt,lot, lof, singlespace]{puthesis}
-%\newcommand{\printmode}{}
-
-%%% For the electronic copy, use doublespacing, define "\proquestmode" to use outlined links, instead of colored links. 
 \documentclass[12pt,lot, lof]{puthesis}
 \newcommand{\proquestmode}{}
-% I prefer proquestmode to be off for electronic copies for normal use, since the colored links are less distracting. However when printed in black and white, the colored links are difficult to read. 
 
-%%% For early drafts without some of the frontmatter
-% Also see the "ifodd" command below to disable more frontmatter
-%\documentclass[12pt]{puthesis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Author & title page info
@@ -40,9 +24,6 @@
 
 \title{ Comparative Analysis between Micro and Macro Agent Evacuation Using PedSim Simulator   }
 
-% \begin{document}
-% \includegraphics{laquila}
-
 
 \submitted{March 2019}  % degree conferral date (January, April, June, September, or November)
 \copyrightyear{2019}  % year in which the copyright is secured by publication of the dissertation.
@@ -50,8 +31,6 @@
 \adviser{Professor Henry Muccini}  %replace with the full name of your adviser
 %\departmentprefix{Program in}  % defaults to "Department of", but programs need to change this.
 \department{Informatics}
-
-% \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\
 %%%% Tweak float placements
@@ -254,6 +233,7 @@
 \include{ch-intro/chapter-intro}
 \include{ch-pastwork/chapter-pastwork}
 \include{ch-implementation/chapter-implementation}
+\include{ch-experimentation/chapter-experimentation}
 % \include{ch-conclusion/chapter-conclusion}
 % \appendix % all chapters following will be labeled as appendices
 % \include{ch-appendicies/implementation}

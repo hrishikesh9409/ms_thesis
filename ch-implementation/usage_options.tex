@@ -108,6 +108,23 @@ The following figure \ref{coppito_pedsim} depicts the environment of PedSim and 
 
 The above figure \ref{coppito_simulation} represents the microscopic agents being simulated within the PedSim environment, as the agents are subjected to the various constraints and are tasked to evacuate to the safe zone \textbf{"E"}.
 
+PedSim also provides a quick and easy way to change certain key constraints within its front end QT client. The following figure \ref{variableOptions} depicts the variables that can be changed in real time whilst the simulation is being processed.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{implementation/variableOptions.png}
+  \caption{Real Time Variable Constraints in PedSim}
+  \label{variableOptions}
+\end{figure}
+
+The above figure depicts 3 variable sliders that can be applied to the simulation in real time. The three sliders are explained as follows:
+
+\begin{enumerate}
+  \item precision(h) - this represents the time steps $\tau$
+  \item Wall Force - this force determines how close to the obstacles they can tread, this is extremely useful in modelling situations like fire, heat etc., in cases where the walls of the topology should not approached due the nature of the disaster or situation.
+  \item Pedastrian Force - This force essentially determines the social forces among the participating agents. The more the pedastrian force the less intermixing happens between the agents. This variable constraint is especially important in modelling cell capacities and in determining flow dynamics. 
+\end{enumerate}
+
 The following subsection describes in detail the algorithm that is used in the simulation of the various scenarios. 
 
 
@@ -120,20 +137,81 @@ The “coppito” module pipelines this plot information for further processing.
 
 In the work by H.Muccini et. al \cite{ref5}, discussion of the linearization of the constraints for effectively reducing the evacuation time of the agents is mentioned. However since its redundant to use linearization within the pedsim framework to simulate for the scenario, we mainly consider only 3 of the below mentioned constraints.
 
-\begin{equation}
+\begin{equation}\label{eq1}
     y^t_j-y^{t-1}_j-\sum_{i:ij\in A}x^{t-1}_{ij}+\sum_{i:ji\in A}x^{t-1}_{ji}=0
 \end{equation}
 
 \hspace{100mm} $j\in V,t\in T,t>0$
 
-\begin{equation}
+\begin{equation}\label{eq2}
   0\leq x^t_{ij}+x^t_{ji}\leq c_{ij}
 \end{equation}
 
 \hspace{100mm} $t\in T,ij\in A$
 
-\begin{equation}
+\begin{equation}\label{eq3}
   0\leq y^t_i\leq n_i
 \end{equation}
 
 \hspace{100mm} $t\in T,i\in V$
+
+Where,
+
+\begin{enumerate}
+  \item $T=\{0,1,...,\tau\}$, set of unit of time slots.
+  \item $y^t_i$ = state of cell $i\in V$ at time $t\in T$, that is, the number of persons that occupy $i$ at $t$.
+  \item $n_i$ = capacity of cell $i$; it measures the maximum nominal amount of people that $i$ can host at any time.
+  \item $x^t_{ij}$ = how many persons move from cell $i$ to an adjacent cell $j$ in $(t, t+1]$; this gives the average speed at which the agent flow proceeds from cell $i$ to cell $j$.
+  \item $c_{ij}$ = capacity of the passage between cell $i$ and cell $j$; this is the maximum amount of people that, independently on how many persons there are in cell $j$, can traverse the passage in the time unit.
+\end{enumerate}
+
+The above conditions are a set of mandatory inclusive pre-requisites required to be included from \textit{An IoT Software Architecture for an Evacuable Building Architecture} by H. Muccini et. al \cite{ref5}, since the experimentation of various scenarios are based on the aforementioned set of equations and conditions. Through this thesis we introduce 4 more constraints to be included along with this base algorithm. The specific nature and details of the additional constraints will be discussed in the next chapter, where the various different experiments and scenarios are carried and are analyzed. It must also be mentioned that in order to be coherent with the mentioned work and also to analyze optimal egress paths the following condition is also considered in addition to the above 3:
+
+
+\hspace{60mm} max $y^\tau_0$    \hspace{60mm} (3.4)
+
+The above condition is obviously included in order to maximize the number of evacuees during the disaster scenario.
+
+
+\section{Topology Formulation}
+\label{sec: Topology Formulation}
+
+
+The topology of the building as given in \ref{Coppito0 layout} is modeled according to the \textit{Alan Turing Building Architecture} and as shown in the figure the whole Coppito 0 building is subdivided into cells of equal length and breadth. Each cell also has a cell capacity as defined above and is assumed that inter-connected cells have full passage, if not bound by walls or walls with reduced passage capacity(doors). 
+
+The coppito source module divides the entire topology into such grids that are composed of cells, whose initial plot point is taken from the loadscene module, which in turn takes its information from the coppito.xml file. To translate simple plot points to a complex cell based grid structure, a highly complex user defined data structure was developed to store this information. 
+
+The plot points that are stored into the .xml file is randomly plotted with the exception of the first starting point in order to facilitate a quicker render of the entire building. However for the processing of a cell based structure, this information cannot be random and hence the information is then once again converted to form a structured cell geometry.
+
+Thus a complex user defined data structure is defined to hold all this information in place. For the sake of convenience and optimal storage of data, the coppito 0 building is divided into regions called blocks. Each block contains a set number of cells and naturally have a variable number of cells. The whole topology is divided into 18 blocks and consists in total of 119 cells. Each cell is also of a specific dimension and has a certain cell length and a cell width. To understand what a block is, it can be easily explained diagrammatically as follows:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{implementation/block.png}
+  \caption{Groups of Cells Making a Block Structure}
+  \label{block}
+\end{figure}
+
+From the above figure \ref{block}, the red encircled circled area which includes the cells numbered 96, 85, 74, 63, 52, 97, 86, 75, 64, 53 form a block. Although a certain number of cells make up a block, the number of cells that make a block is often variable. Essentially one section of the topology is considered a block. This helps segregate different areas of the premises and identify them easily.
+
+Further decomposing the cell, subdivides it into 4 edge lines, each edge line further decomposes into 4 vertices, an end to end $x$ and $y$ plot points. Along with these information are stored if the edge lines are walls and if they incorporate doors. This is highly useful for creating a tree structure pattern for path finding, used by agents during evacuation simulation. The final complex structure that is defined to hold this cell structure is explained in detail in the Appendix section. In order to dynamically store the data of the cell information, the data structure used in place is a custom user defined 7 layered structure. 
+
+There are several sub-modules implemented in this custom made source file. The following are the following methods that are implemented as part of the module:
+
+\begin{enumerate}
+  \item divide\textunderscore cells
+  \item cell\textunderscore structure\textunderscore allocation
+  \item vertical\textunderscore cell\textunderscore allocation
+  \item non\textunderscore standard\textunderscore vertical\textunderscore allocation
+  \item wall\textunderscore allocation
+  \item wall\textunderscore division\textunderscore horizontal
+  \item wall\textunderscore division\textunderscore vertical
+  \item door\textunderscore allocation
+  \item graph\textunderscore tree\textunderscore structuring
+  \item print\textunderscore block
+  \item print\textunderscore walls
+  \item print\textunderscore door
+  \item print\textunderscore graph
+\end{enumerate}
+
+Further details regarding the technical and programmatic implementation of these modules are provided in the Appendix section of the thesis. The following section discusses the modification to the existing unoptimized algorithm from \cite{ref5}. The different simulation results comparing macro and micro agent simulations are presented and analyzed. The resulting the implications of these observationss are discussed. 

@@ -1,0 +1,32 @@
+\chapter{Experimentation and Analysis\label{ch:Experimentation and Analysis}}
+
+This chapter is intended to provide the experimental proof of the contribution. Through this chapter, the detailed explanation of the additional constraints that are added to the unoptimized algorithm from the previous chapter is provided. Next micro and macro agent simulations are presented pertaining to certain cases and scenarios to compare between the unoptimized and the optimized algorithms. The resulting observations and statistics are then presented for further analysis and the implications are then discussed.
+
+\section{Optimization through Constraints}
+\label{sec: Optimization through Constraints}
+
+From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for agent occupancy, flow control and cell capacity is discussed. However these conditions are hardly realistic when compared to modelling a real crowd of agents. In realistic scenarios, groups of people have altered behavior, confusion panic etc. There will be different forms of social constraints, varying movement speeds, and due to the impaired cognition, perceptions can change leading to different decisions that are made during a catastrophe. To model some of these realistic scenarios, it became evident that the inclusion of certain more properties to the scenario was mandatory. The following conditions as mentioned in sub-section \ref{sec:intro:Objectives and Approach} is analyzed here:
+
+\begin{enumerate}
+  \item Cell capacity specification by defining social distances
+  \begin{itemize}
+  	\item Although PedSim comes by default with a cell class, it does not go coherently with the topology, as cell divisions are highly subjective and can change their length and breadth according to the defined scenario. To cater for this, manipulation of the social forces constraint causes agents to maintain a certain "social distance" from each other. This can be used to our advantage to simulate cell capacities based on these social distances.
+  \end{itemize}
+  \item Definition of total area capacity and doors flow capacity constraints -congestion control
+  \begin{itemize}
+  	\item The algorithm presented in sub-section \ref{sec: Algorithm Description} unfortunately does not handle congestion. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
+  \end{itemize}
+  \item Simulating social attachment among some agents
+  \begin{itemize}
+  	\item With the introduction of the group constraint, social attachments can be modeled for a more realistic approach. For instance friends move together, a mother will most likely not be separable from a child etc. These groups can be defined during the simulation and then observed for the various real time decisions that these groups of agents make.
+  \end{itemize}
+  \item Setting the speed accordingly for various groups
+  \begin{itemize}
+  	\item By default PedSim models for microscopic agents and hence the entirety of the agents are considered as a single group. The movement speed for these agents are varied across a distribution and the average speed set for the microscopic group of agents. By setting a variable speed constraint and with the introduction of groups, we model PedSim to cater for macro and micro agent simulation and thus support varying speeds according to the different group formations that can be defined during the simulation. In other words $v_max$ is not fixed across all agents.
+  \end{itemize}
+\end{enumerate}
+
+The PedSim library is extended to be inclusive of the algorithm from the sub-section \ref{sec: Algorithm Description} and the aforementioned constraints in order to simulate the various scenarios for micro and macro agents. The following sub-section provides a detailed analysis of the various scenarios that are simulated within the PedSim environment.  
+
+\section{Simulation and Scenario Analysis}
+\label{sec: Simulation and Scenario Analysis}

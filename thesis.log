@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  6 MAR 2019 00:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  6 MAR 2019 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -380,28 +380,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 125.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 104.
 
 
 (./thesis.aux (./ch-intro/chapter-intro.aux)
 (./ch-pastwork/chapter-pastwork.aux)
-(./ch-implementation/chapter-implementation.aux))
+(./ch-implementation/chapter-implementation.aux)
+(./ch-experimentation/chapter-experimentation.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 245.
-LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
+LaTeX Font Info:    ... okay on input line 224.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -432,7 +433,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 245.
+Package hyperref Info: Link coloring OFF on input line 224.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -442,9 +443,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count138
 )
-LaTeX Info: Redefining \ref on input line 245.
-LaTeX Info: Redefining \pageref on input line 245.
-LaTeX Info: Redefining \nameref on input line 245.
+LaTeX Info: Redefining \ref on input line 224.
+LaTeX Info: Redefining \pageref on input line 224.
+LaTeX Info: Redefining \nameref on input line 224.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
@@ -453,13 +454,13 @@ LaTeX Info: Redefining \nameref on input line 245.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 247.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 226.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
  [2
 
 ]
@@ -522,7 +523,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=189, 620.3175
+</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=213, 620.3175
 pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/clutter.png Graphic file
  (type png)
@@ -558,7 +559,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=286, 863.475
+</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=311, 863.475
 94pt x 586.44093pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0.JPG Graphic fil
 e (type jpg)
@@ -693,7 +694,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=346,
+</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=370,
  620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0building.png Gra
 phic file (type png)
@@ -704,8 +705,8 @@ to0building.png used on input line 97.
 (pdftex.def)             Requested size: 372.19337pt x 582.68138pt.
 
 [23]
-</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=35
-6, 620.3175pt x 971.12813pt>
+</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=38
+0, 620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/simulationinaction.png G
 raphic file (type png)
 
@@ -716,6 +717,17 @@ ationinaction.png used on input line 104.
 
 [24 </home/hrishi/work/thesis/pictures/implementation/coppito0building.png>]
 [25 </home/hrishi/work/thesis/pictures/implementation/simulationinaction.png>]
+</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=393, 
+196.735pt x 188.705pt>
+File: /home/hrishi/work/thesis/pictures/implementation/variableOptions.png Grap
+hic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/implementation/variableOptions.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/implementation/varia
+bleOptions.png used on input line 115.
+(pdftex.def)             Requested size: 137.71355pt x 132.09259pt.
+
+[26 </home/hrishi/work/thesis/pictures/implementation/variableOptions.png>]
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ú in font cmr12!
@@ -723,38 +735,59 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-[26])) [27] (./thesis.bbl
+[27] [28] [29]
+</home/hrishi/work/thesis/pictures/implementation/block.png, id=431, 737.00343p
+t x 435.12563pt>
+File: /home/hrishi/work/thesis/pictures/implementation/block.png Graphic file (
+type png)
+
+<use /home/hrishi/work/thesis/pictures/implementation/block.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/implementation/block
+.png used on input line 190.
+(pdftex.def)             Requested size: 368.50081pt x 217.56227pt.
+ [30 </home/hrishi/work/thesis/pictures/implementation/block.png>])) [31]
+\openout2 = `ch-experimentation/chapter-experimentation.aux'.
+
+
+(./ch-experimentation/chapter-experimentation.tex
+Chapter 4.
+[32
+
+
+
+] [33]) [34] (./thesis.bbl
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [28
+ [35
 
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
- [29]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
+ [36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
  (./thesis.aux
 (./ch-intro/chapter-intro.aux) (./ch-pastwork/chapter-pastwork.aux)
-(./ch-implementation/chapter-implementation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+(./ch-implementation/chapter-implementation.aux)
+(./ch-experimentation/chapter-experimentation.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DEE64BF8B1D8D00A469AF185DF307454;1318.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+(rerunfilecheck)             Checksum: FD5B664F74677CB2847243104680AEEE;1621.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
  ) 
 Here is how much of TeX's memory you used:
- 7556 strings out of 493029
- 110132 string characters out of 6136234
- 203876 words of memory out of 5000000
- 10776 multiletter control sequences out of 15000+600000
+ 7626 strings out of 493029
+ 111584 string characters out of 6136234
+ 204959 words of memory out of 5000000
+ 10798 multiletter control sequences out of 15000+600000
  10753 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,30p,2134b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,7n,30p,2134b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -765,10 +798,10 @@ s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb>
-Output written on thesis.pdf (39 pages, 520833 bytes).
+Output written on thesis.pdf (46 pages, 1054555 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 397 compressed objects within 4 object streams
- 131 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 561 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 223 words of extra memory for PDF output out of 10000 (max. 10000000)
 
