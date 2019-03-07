@@ -181,17 +181,24 @@ The implications for these inferences will be discussed in section 4.3.
 \subsection{Case 3: Congestion Dynamics and Flow Control}
 \label{sec: Case 3: Congestion Dynamics and Flow Control}
 
-This section presents a detailed case on the effect of the width of emergency exits on the evacuation time. 
+This section presents a detailed case on the effect of the width of emergency exits on the evacuation time. The work by H. Muccini et al. \cite{ref5} focuses on an ideal and optimal path without accounting for more advanced constraints. One of the most important effects of a disaster on human agents is the element of chaos and panic. This causes most agents to panic and make rash decisions, all clustering towards an exit point. This causes massive congestions and jams which ultimately leads to stampedes and also the failure for the agents to evacuate to an exist point in the shortest time frame possible. To analyze an optimal egress path however, we do not simulate congestion itself as such, rather we aim for congestion avoidance. To avoid congestion, the routes for various people need to be calculated in real time in order to re-route in the case of an impending congestion scenario.
 
+In order to analyze the congestion, we must first answer the question, what leads to congestion? The answer is two fold as follows:
+\begin{itemize}
+  \item The obvious answer is - too little space and too many people to fill that space. The forthcoming tables and graphs are to experiment the effect of exit width on congestion.
+  \item The second answer is more complex, dealing with walking speeds, social forces and group decisions. 
+\end{itemize}
 
-The following table \ref{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro} depicts optimistic values for macro agents whilst varying exit capacities and thus in turn affecting flow dynamics.
+In section \ref{sec: Case 4: Shortest Path vs Ideal Path}, detailed case study on walking speeds and decision making is presented. Although the same group dynamics applies to this case too, the focus is on exit width. The forthcoming tables and graph depict the various scenarios that are simulated for both macro and micro agents using the un-optimized and optimized algorithms respectively.
+
+The following table \ref{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro Agent Model} depicts optimistic values for macro agents whilst varying exit capacities and thus in turn affecting flow dynamics.
 
 \begin{table}[H]
 \centering
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|} 
 \hline
-Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic values for Unoptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for Optimized Algorithm\end{tabular}  \\ 
+Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic values for \\Unoptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for \\Optimized Algorithm\end{tabular}  \\ 
 \hline
 0.4                      & 45                                                                                                                  & 83                                                                                                                 \\
 0.5                      & 43                                                                                                                  & 79                                                                                                                 \\
@@ -222,16 +229,19 @@ Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(
 3.0                      & 1                                                                                                                   & 1                                                                                                                  \\
 \hline
 \end{tabular}}
-\caption{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro}
-\label{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro}
+\caption{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro Agent Model}
+\label{Emergency Exits Width vs Evacuation Time : Optimistic Values for Macro Agent Model}
 \end{table}
+
+Comparison between the pessimistic cases of optimized and the un-optimized cases are presented for macro agent model below in table \ref{Emergency Exits Width vs Evacuation Time : Pessimistic values for Macro Agent Simulation}:
+
 
 \begin{table}[H]
 \centering
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|} 
 \hline
-    Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for UnOptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for Optimized Algorithm\end{tabular}  \\ 
+    Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\UnOptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\Optimized Algorithm\end{tabular}  \\ 
 \hline
 0.4                      & 120                                                                                                                 & 205                                                                                                                \\
 0.5                      & 105                                                                                                                 & 192                                                                                                                \\
@@ -266,6 +276,7 @@ Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(
 \label{Emergency Exits Width vs Evacuation Time : Pessimistic values for Macro Agent Simulation}
 \end{table}
 
+To run a simulation for the case of micro model agents, certain characteristics were given to 20\% of the total number of agents in each case. The characteristics include variable speeds(random speed between 0. 7 $m/s$ and 1.4 $m/s$), and the other constraints of area capacity and the variable exit door capacity as follows:
 
 
 \begin{table}[H]
@@ -273,7 +284,7 @@ Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|} 
 \hline
-Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for Micro Agent Simulation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Pessimistic Values for Micro Agent Simulation\end{tabular}  \\ 
+Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for \\Micro Agent Simulation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Pessimistic Values for \\Micro Agent Simulation\end{tabular}  \\ 
 \hline
 0.4                      & 246                                                                                                                  & 415                                                                                                                    \\
 0.5                      & 223                                                                                                                  & 370                                                                                                                    \\
@@ -308,30 +319,82 @@ Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(
 \label{Emergency Exits Width vs Evacuation Time : Micro Agent Simulation}
 \end{table}
 
+The following series of graphs are a depiction of the above presented tables respectively. 
+
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{simulation/Optimistic_Graph_for_Macro_Agent_Simulation.png}
+  \includegraphics[scale=0.45]{simulation/Optimistic_Graph_for_Macro_Agent_Simulation.png}
   \caption{Optimistic Graph for Macro Agent Simulation}
   \label{Optimistic Graph for Macro Agent Simulation}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{simulation/Pessimistic_Graph_for_Macro_Agent_Simulation.png}
+  \includegraphics[scale=0.45]{simulation/Pessimistic_Graph_for_Macro_Agent_Simulation.png}
   \caption{Pessimistic Graph for Macro Agent Simulation}
   \label{Pessimistic Graph for Macro Agent Simulation}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{simulation/Pessimistic_and_Optimistic_Evacuation_Time_for_Micro_Agent_Simulation.png}
+  \includegraphics[scale=0.45]{simulation/Pessimistic_and_Optimistic_Evacuation_Time_for_Micro_Agent_Simulation.png}
   \caption{Pessimistic and Optimistic Evacuation Time for Micro Agent Simulation}
   \label{Pessimistic and Optimistic Evacuation Time for Micro Agent Simulation}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{simulation/summary.png}
+  \includegraphics[scale=0.45]{simulation/summary.png}
   \caption{Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}
   \label{Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}
 \end{figure}
+
+From the above figures, it is made abundantly clear that the shorter the exits, the more time it would take for the evacuees to evacuate during a disaster scenario. Though this seems like a trivial scenario to depict, it has some serious implications. The most important inference that can be made from the presented data is the derivation of how many people can effectively navigate through to an exit during a disaster scenario. The presented scenario compares the obtained statistical data to the reference figure 8 from \cite{ref5}.
+
+It is also made clear that with more constraints and more realism, the statistical data shows that the congestion tends to increase as the evacuees tend to take longer and longer time to evacuate. Especially in the final scenario with the pessimistic values denoted for the micro model agent simulation, the evacuation time required to get all the agents to safety is exponential compared to the previous cases. The difference between pessimistic case and the optimal one is that in the optimistic case, only the shortest possible path towards the exit is considered. However, for the pessimistic case, all possible exit strategies are considered and hence the pessimistic case scenario should be considered whilst modeling a safe topology that caters for safe exit paths.
+
+It should also be mentioned that the social distances in the micro agent simulations are set according to the \href{https://www.gov.uk/workplace-fire-safety-your-responsibilities}{UK fire safety regulations} and the correponding guide given \href{https://www.merseyfire.gov.uk/aspx/pages/protection/pdf/Calculating_Occupancy_assembly_buildings_GT.pdf}{here}. The guide specifies that the maximum allowed density is 0.3 square meters per person, 0.5 for public houses, 0.8 for exhibition spaces, 1.0 for dining and 2.0 for sports areas etc. From \cite{ref5}, who also follows the same regulations, 1.25 persons per square meter is considered. Hence for this scenario, the social distances constraint is set accordingly. The area capacity constraints that are set throughout all these experiments are set according to these regulation standards. In our case, since its clearly mentioned that not more 6 are allowed within an office space, each room cannot hold more than 6 people at a single time.
+
+Figure \ref{Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation} presents a summary of all the congestion scenarios. The pessimistic values that are obtained from the micro agent scenario shows the difference in the exponentiation graphs where the time taken for evacuation exponentially increases with a time complexity of $O(N^3)$ as the width of the exits are decreased.  
+
+\subsection{Case 4: Shortest Path vs Ideal Path}
+\label{sec: Case 4: Shortest Path vs Ideal Path}
+
+This section presents the evacuation of agents and the time required based on the scenario of shortest path and the ideal paths. The shortest path in realistic scenario may not always be the shortest time path. Hence it is required to re-route the agents to a more optimal path, i.e. the ideal path in order to reach the exit points. In order to identify the ideal path, the algorithm traveses through all possible paths from the given agent location and then based on flow capacity and congestion ratio, it strategizes an ideal path for the agents to take whilst heading towards the safe zone. 
+
+The ideal path formation depends on some factors which are given below:
+
+\begin{itemize}
+  \item Number of people in the group - this is used in calculation of the ideal path as the number of people in a group can be used to determine if other cluster of agents can form a congestion or not. It falls under congestion control and prediction.
+  \item The movement speed of the group - this is used to calculate the ideal path by predicting if the group can reach a certain location or not to avoid congestion and cluster, if the group can access for instance an emergency service like elevators, emergency stairwells, exits etc.
+  \item Area capacity - This is used to determine if the agent(s) are to be re-routed to another path.
+  \item Door and cell flow dynamic- cell flow dynamic is used to determine if the stream of agents can be navigated through or not, to determine if a certain pathway is one way navigation only or not. The door flow capacity is used to determine the queuing and wait time as most congestions occur at key door and exit points. 
+\end{itemize}
+
+The above mentioned conditions are incorporated in this scenario in order to scan through all the possible paths and then determine an ideal path for the agents. Since walking speeds play an important role in determining routing path, it became a necessity to group people according to \textit{Energetic consequences of human sociality: walking speed choices among friendly dyads} by Wagnild et al. \cite{ref24}. According to Wagnild male agents walk at a faster pace when they are alone at an average speed of 1.53 $m/s$. They walk the fastest with a male companion at a speed of 1.60 $m/s$. The speed is subsequently lowered in the presence of a female agent to match her speed, which comes to around 1.44 $m/s$. Females walk even slower when accompanied with a female partner at a speed of 1.39 $m/s$. 
+
+The mentioned walking speeds are done so in order to account for the expense of calories spent whilst walking. Men tend to reduce their speeds while walking with a female partner, female agents similarly increase their speeds and the compromized speed averaging at 1.44 $m/s$ is set upon. All the agents presented in the study are capable adults with no apparent health problems. 
+
+However in order to make a realistic approach to simulation, all age groups should be considered. Hence for this case, 20\% of the total number of agents are considered agents with slower movement speeds, i.e., between 0.7 $m/s$ and 1.2 $m/s$. All the other agents are given a random speed between 1.2 and 1.6 $m/s$. The door flow capacity is set to not more than 5 for pessimistic cases as the same value has been used in \cite{ref5}, to remain coherent with the statistics. The upper limit, i.e. optimistic value is no more than 16 persons can pass through a 1 meter wide door during one time slot $\tau$. 
+
+In order to model the exact movement speed of an agent within the PedSim environment, the total time required to move an agent across the entire breadth of the topology recorded and then subsequently divided by the total time taken in order to calculate the average speed that is taken by the agent to traverse 1 $m$ of the topology. This then can be used to set variable speeds according to aforementioned constraints and then the scenario is run within the environment of PedSim. The following graphs depict the pessimistic and the optimistic values that are obtained as a result of the simulations. However, for macro agent scenario, a movement speed based on the normal distribution across all agents is set.
+
+The observational data from \cite{ref5} is used as a baseline reference in order to conduct the forthcoming simulations. The study is presented as follows:
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/ideal_evacuation_along_shortest_paths.JPG}
+  \caption{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}
+  \label{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}
+\end{figure}
+
+The above figure represents the number of people who can be evacuated within the given time frame for both pessimistic and optimistic cases, while simulating the whole scene for macro agent scenario. The pessimistic scenario runs for a total of 5 minutes and 35 seconds while the optimistic scenario runs for a total of 1 minute and 20 seconds. The figure below depict the cases for optimistic scenario that run on an macro agent model simulating an optimized algorithm for path routing.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/Optimistic_Macro.png}
+  \caption{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}
+  \label{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}
+\end{figure}
+
+Compared to the previous figure \ref{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}, its immediately evident that evacuation required is longer and the number of agents that are not evacuated stays on for a longer period of time. This is with an increased capacity for the pathways since its the optimal scenario. The next graph depicts the simulation 

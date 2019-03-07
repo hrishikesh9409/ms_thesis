@@ -23,4 +23,5 @@
 \contentsline {subsection}{\numberline {4.2.1}Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Case 2: Run Time Comparison between Micro and Macro Agent Simulation}{39}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Case 3: Congestion Dynamics and Flow Control}{43}{subsection.4.2.3}
-\contentsline {chapter}{Bibliography}{50}{section*.8}
+\contentsline {subsection}{\numberline {4.2.4}Case 4: Shortest Path vs Ideal Path}{50}{subsection.4.2.4}
+\contentsline {chapter}{Bibliography}{54}{section*.8}

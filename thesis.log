@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  7 MAR 2019 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  8 MAR 2019 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,7 +573,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=255, 620.3175
+</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=265, 620.3175
 pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/clutter.png Graphic file
  (type png)
@@ -609,7 +609,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=353, 863.475
+</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=363, 863.475
 94pt x 586.44093pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0.JPG Graphic fil
 e (type jpg)
@@ -744,7 +744,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=412,
+</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=422,
  620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0building.png Gra
 phic file (type png)
@@ -755,8 +755,8 @@ to0building.png used on input line 97.
 (pdftex.def)             Requested size: 372.19337pt x 582.68138pt.
 
 [23]
-</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=42
-2, 620.3175pt x 971.12813pt>
+</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=43
+3, 620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/simulationinaction.png G
 raphic file (type png)
 
@@ -767,7 +767,7 @@ ationinaction.png used on input line 104.
 
 [24 </home/hrishi/work/thesis/pictures/implementation/coppito0building.png>]
 [25 </home/hrishi/work/thesis/pictures/implementation/simulationinaction.png>]
-</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=436, 
+</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=446, 
 196.735pt x 188.705pt>
 File: /home/hrishi/work/thesis/pictures/implementation/variableOptions.png Grap
 hic file (type png)
@@ -786,7 +786,7 @@ Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
 [27] [28] [29]
-</home/hrishi/work/thesis/pictures/implementation/block.png, id=473, 737.00343p
+</home/hrishi/work/thesis/pictures/implementation/block.png, id=483, 737.00343p
 t x 435.12563pt>
 File: /home/hrishi/work/thesis/pictures/implementation/block.png Graphic file (
 type png)
@@ -816,8 +816,8 @@ Overfull \hbox (20.77011pt too wide) in paragraph at lines 86--87
  []
 
 [36] [37]
-</home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png, id=54
-7, 912.40875pt x 564.1075pt>
+</home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png, id=55
+8, 912.40875pt x 564.1075pt>
 File: /home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png G
 raphic file (type png)
 
@@ -833,7 +833,7 @@ Overfull \hbox (22.58327pt too wide) in paragraph at lines 97--98
 [38 </home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png (P
 NG copy)>] [39]
 </home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agent_Simulation.p
-ng, id=565, 999.735pt x 623.32875pt>
+ng, id=575, 999.735pt x 623.32875pt>
 File: /home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agent_Simulat
 ion.png Graphic file (type png)
 
@@ -848,57 +848,31 @@ Overfull \hbox (36.25552pt too wide) in paragraph at lines 165--166
  []
 
 [40] [41] [42 </home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agen
-t_Simulation.png (PNG copy)>]
-Overfull \hbox (13.49873pt too wide) in paragraph at lines 224--225
- [][] 
- []
-
-
-Overfull \hbox (20.07281pt too wide) in paragraph at lines 264--265
- [][] 
- []
-
-[43]
-Overfull \hbox (26.71979pt too wide) in paragraph at lines 306--307
- [][] 
- []
-
-[44]
+t_Simulation.png (PNG copy)>] [43] [44] [45]
 </home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Agent_
-Simulation.png, id=590, 909.3975pt x 562.1pt>
+Simulation.png, id=608, 909.3975pt x 562.1pt>
 File: /home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_A
 gent_Simulation.png Graphic file (type png)
 
 <use /home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Ag
 ent_Simulation.png>
 Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Optimisti
-c_Graph_for_Macro_Agent_Simulation.png used on input line 313.
-(pdftex.def)             Requested size: 454.69765pt x 281.04932pt.
-
-Overfull \hbox (21.07765pt too wide) in paragraph at lines 313--314
- [][] 
- []
-
-[45]
+c_Graph_for_Macro_Agent_Simulation.png used on input line 326.
+(pdftex.def)             Requested size: 409.2251pt x 252.94266pt.
+ [46]
 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_Agent
-_Simulation.png, id=596, 938.50626pt x 580.1675pt>
+_Simulation.png, id=613, 938.50626pt x 580.1675pt>
 File: /home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_
 Agent_Simulation.png Graphic file (type png)
 
 <use /home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_A
 gent_Simulation.png>
 Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Pessimist
-ic_Graph_for_Macro_Agent_Simulation.png used on input line 320.
-(pdftex.def)             Requested size: 469.25198pt x 290.08302pt.
+ic_Graph_for_Macro_Agent_Simulation.png used on input line 333.
+(pdftex.def)             Requested size: 422.32391pt x 261.07295pt.
 
-Overfull \hbox (35.63199pt too wide) in paragraph at lines 320--321
- [][] 
- []
-
-[46 </home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Ag
-ent_Simulation.png (PNG copy)>]
 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_Evacua
-tion_Time_for_Micro_Agent_Simulation.png, id=601, 935.495pt x 578.16pt>
+tion_Time_for_Micro_Agent_Simulation.png, id=614, 935.495pt x 578.16pt>
 File: /home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_E
 vacuation_Time_for_Micro_Agent_Simulation.png Graphic file (type png)
 
@@ -906,61 +880,89 @@ vacuation_Time_for_Micro_Agent_Simulation.png Graphic file (type png)
 acuation_Time_for_Micro_Agent_Simulation.png>
 Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Pessimist
 ic_and_Optimistic_Evacuation_Time_for_Micro_Agent_Simulation.png used on input 
-line 327.
-(pdftex.def)             Requested size: 467.74635pt x 289.07928pt.
-
-Overfull \hbox (34.12636pt too wide) in paragraph at lines 327--328
- [][] 
- []
-
-[47 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_A
-gent_Simulation.png (PNG copy)>]
-</home/hrishi/work/thesis/pictures/simulation/summary.png, id=606, 971.63pt x 5
+line 340.
+(pdftex.def)             Requested size: 420.96886pt x 260.16959pt.
+ [47 </home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_A
+gent_Simulation.png (PNG copy)> </home/hrishi/work/thesis/pictures/simulation/P
+essimistic_Graph_for_Macro_Agent_Simulation.png (PNG copy)>]
+</home/hrishi/work/thesis/pictures/simulation/summary.png, id=619, 971.63pt x 5
 90.205pt>
 File: /home/hrishi/work/thesis/pictures/simulation/summary.png Graphic file (ty
 pe png)
  <use /home/hrishi/work/thesis/pictures/simulation/summary.png>
 Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/summary.p
-ng used on input line 334.
-(pdftex.def)             Requested size: 485.81381pt x 295.10178pt.
+ng used on input line 347.
+(pdftex.def)             Requested size: 437.22946pt x 265.58978pt.
 
-Overfull \hbox (52.19382pt too wide) in paragraph at lines 334--335
+Overfull \hbox (3.60947pt too wide) in paragraph at lines 347--348
  [][] 
  []
 
-) [48 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_
-Evacuation_Time_for_Micro_Agent_Simulation.png (PNG copy)>] [49 </home/hrishi/w
-ork/thesis/pictures/simulation/summary.png (PNG copy)>] (./thesis.bbl
+[48 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_Ev
+acuation_Time_for_Micro_Agent_Simulation.png (PNG copy)> </home/hrishi/work/the
+sis/pictures/simulation/summary.png (PNG copy)>] [49] [50] [51]
+</home/hrishi/work/thesis/pictures/simulation/ideal_evacuation_along_shortest_p
+aths.JPG, id=645, 891.33pt x 414.04688pt>
+File: /home/hrishi/work/thesis/pictures/simulation/ideal_evacuation_along_short
+est_paths.JPG Graphic file (type jpg)
+
+<use /home/hrishi/work/thesis/pictures/simulation/ideal_evacuation_along_shorte
+st_paths.JPG>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/ideal_eva
+cuation_along_shortest_paths.JPG used on input line 386.
+(pdftex.def)             Requested size: 445.66391pt x 207.02292pt.
+
+Overfull \hbox (12.04391pt too wide) in paragraph at lines 386--387
+ [][] 
+ []
+
+
+</home/hrishi/work/thesis/pictures/simulation/Optimistic_Macro.png, id=646, 890
+.32625pt x 550.055pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Optimistic_Macro.png Graphic
+ file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Optimistic_Macro.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Optimisti
+c_Macro.png used on input line 395.
+(pdftex.def)             Requested size: 445.16203pt x 275.02682pt.
+
+Overfull \hbox (11.54204pt too wide) in paragraph at lines 395--396
+ [][] 
+ []
+
+[52 </home/hrishi/work/thesis/pictures/simulation/ideal_evacuation_along_shorte
+st_paths.JPG>]) [53 </home/hrishi/work/thesis/pictures/simulation/Optimistic_Ma
+cro.png (PNG copy)>] (./thesis.bbl
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [50
+ [54
 
 
 
-]
-[51])
+] [55])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
- [52]
+ [56]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
- (./thesis.aux (./ch-intro/chapter-intro.aux)
-(./ch-pastwork/chapter-pastwork.aux)
+ (./thesis.aux
+(./ch-intro/chapter-intro.aux) (./ch-pastwork/chapter-pastwork.aux)
 (./ch-implementation/chapter-implementation.aux)
 (./ch-experimentation/chapter-experimentation.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F80EA1C825F0D8BD167E3B9C8D8DC4CC;1991.
+(rerunfilecheck)             Checksum: EC09EE33309AE3E74643CE69C966DD1D;2086.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 8449 strings out of 493029
- 127186 string characters out of 6136234
- 243140 words of memory out of 5000000
- 11542 multiletter control sequences out of 15000+600000
+ 8470 strings out of 493029
+ 128172 string characters out of 6136234
+ 243419 words of memory out of 5000000
+ 11554 multiletter control sequences out of 15000+600000
  11358 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,16n,35p,2134b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -974,10 +976,10 @@ s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb>
-Output written on thesis.pdf (62 pages, 1252652 bytes).
+Output written on thesis.pdf (66 pages, 1374857 bytes).
 PDF statistics:
- 710 PDF objects out of 1000 (max. 8388607)
- 612 compressed objects within 7 object streams
- 205 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 751 PDF objects out of 1000 (max. 8388607)
+ 647 compressed objects within 7 object streams
+ 212 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
