@@ -120,7 +120,7 @@ PedSim also provides a quick and easy way to change certain key constraints with
 The above figure depicts 3 variable sliders that can be applied to the simulation in real time. The three sliders are explained as follows:
 
 \begin{enumerate}
-  \item precision(h) - this represents the time steps $\tau$
+  \item precision(h) - this represents the time steps $\tau$. These are discretized time steps that are used to calculate the total time taken for the evacuation of the participating agents.
   \item Wall Force - this force determines how close to the obstacles they can tread, this is extremely useful in modelling situations like fire, heat etc., in cases where the walls of the topology should not approached due the nature of the disaster or situation.
   \item Pedastrian Force - This force essentially determines the social forces among the participating agents. The more the pedastrian force the less intermixing happens between the agents. This variable constraint is especially important in modelling cell capacities and in determining flow dynamics. 
 \end{enumerate}
@@ -214,4 +214,4 @@ There are several sub-modules implemented in this custom made source file. The f
   \item print\textunderscore graph
 \end{enumerate}
 
-Further details regarding the technical and programmatic implementation of these modules are provided in the Appendix section of the thesis. The following section discusses the modification to the existing unoptimized algorithm from \cite{ref5}. The different simulation results comparing macro and micro agent simulations are presented and analyzed. The resulting the implications of these observationss are discussed. 
+Further details regarding the technical and programmatic implementation of these modules are provided in the Appendix section of the thesis. The following section discusses the modification to the existing unoptimized algorithm from \cite{ref5}. The different simulation results comparing macro and micro agent simulations are presented and analyzed. The resulting the implications of these observations are discussed. 

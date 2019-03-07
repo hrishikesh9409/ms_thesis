@@ -8,3 +8,9 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Real Time Variable Constraints in PedSim}}{26}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Groups of Cells Making a Block Structure}}{30}{figure.3.5}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Macro Agent Simulation - Optimized vs UnOptimized Algorithms}}{38}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Micro vs Macro Agent Simulation}}{42}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Optimistic Graph for Macro Agent Simulation}}{46}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pessimistic Graph for Macro Agent Simulation}}{47}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Pessimistic and Optimistic Evacuation Time for Micro Agent Simulation}}{48}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}}{49}{figure.4.6}

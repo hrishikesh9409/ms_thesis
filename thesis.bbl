@@ -64,6 +64,12 @@ Damon~P. Coppola.
   Disaster Management (Third Edition)}, pages 224 -- 274.
   Butterworth-Heinemann, Boston, third edition edition, 2015.
 
+\bibitem{ref23}
+W~Daamen and SP~Hoogendoorn.
+\newblock Emergency door capacity: influence of door width, population
+  composition and stress level.
+\newblock {\em Fire technology}, 48(1):55--71, 2012.
+
 \bibitem{ref18}
 Antoine Desmet, Huibo Bi, and Erol Gelenbe.
 \newblock Simulation of congestion management for emergency evacuation.
@@ -134,5 +140,18 @@ Ashutosh Trivedi and Shrisha Rao.
   behavior.
 \newblock {\em IEEE Transactions on Computational Social Systems}, 5:277--, 03
   2018.
+
+\bibitem{ref24}
+Janelle Wagnild and Cara~M Wall-Scheffler.
+\newblock Energetic consequences of human sociality: walking speed choices
+  among friendly dyads.
+\newblock {\em PloS one}, 8(10):e76576, 2013.
+
+\bibitem{ref25}
+Jianhong Ye, Xiaohong Chen, Chao Yang, and Jiaorong Wu.
+\newblock Walking behavior and pedestrian flow characteristics for different
+  types of walking facilities.
+\newblock {\em Transportation Research Record: Journal of the Transportation
+  Research Board}, (2048):43--51, 2008.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  6 MAR 2019 20:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.21)  7 MAR 2019 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -246,18 +246,68 @@ Package graphics Info: Driver file: pdftex.def on input line 95.
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks30
+\XKV@tempa@toks=\toks31
+)
+\XKV@depth=\count116
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box30
+)
+\tc@llx=\dimen129
+\tc@lly=\dimen130
+\tc@urx=\dimen131
+\tc@ury=\dimen132
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen133
+\adjbox@Height=\dimen134
+\adjbox@Depth=\dimen135
+\adjbox@Totalheight=\dimen136
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count117
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box31
+\sift@deathcycles=\count118
+\@vwid@loff=\dimen137
+\@vwid@roff=\dimen138
+))
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip52
-\enit@outerparindent=\dimen129
-\enit@toks=\toks30
-\enit@inbox=\box30
-\enitdp@description=\count116
+\enit@outerparindent=\dimen139
+\enit@toks=\toks32
+\enit@inbox=\box32
+\enitdp@description=\count119
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks31
-\verbatim@line=\toks32
+\every@verbatim=\toks33
+\verbatim@line=\toks34
 \verbatim@in@stream=\read1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
@@ -266,17 +316,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count117
-\LTcapwidth=\dimen130
-\LT@head=\box31
-\LT@firsthead=\box32
-\LT@foot=\box33
-\LT@lastfoot=\box34
-\LT@cols=\count118
-\LT@rows=\count119
-\c@LT@tables=\count120
-\c@LT@chunks=\count121
-\LT@p@ftn=\toks33
+\LTchunksize=\count120
+\LTcapwidth=\dimen140
+\LT@head=\box33
+\LT@firsthead=\box34
+\LT@foot=\box35
+\LT@lastfoot=\box36
+\LT@cols=\count121
+\LT@rows=\count122
+\c@LT@tables=\count123
+\c@LT@chunks=\count124
+\LT@p@ftn=\toks35
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -327,14 +377,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen131
-\Hy@linkcounter=\count122
-\Hy@pagecounter=\count123
+\@linkdim=\dimen141
+\Hy@linkcounter=\count125
+\Hy@pagecounter=\count126
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count124
+\Hy@SavedSpaceFactor=\count127
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -346,12 +396,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count125
+\c@Hy@tempcnt=\count128
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen132
-\Fld@menulength=\count126
-\Field@Width=\dimen133
-\Fld@charsize=\dimen134
+\XeTeXLinkMargin=\dimen142
+\Fld@menulength=\count129
+\Field@Width=\dimen143
+\Fld@charsize=\dimen144
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -361,17 +411,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count127
-\c@Item=\count128
-\c@Hfootnote=\count129
+\Hy@abspage=\count130
+\c@Item=\count131
+\c@Hfootnote=\count132
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count130
-\c@bookmark@seq@number=\count131
+\Fld@listcount=\count133
+\c@bookmark@seq@number=\count134
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -380,46 +430,43 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip57
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 104.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 105.
 
 
 (./thesis.aux (./ch-intro/chapter-intro.aux)
 (./ch-pastwork/chapter-pastwork.aux)
 (./ch-implementation/chapter-implementation.aux)
-(./ch-experimentation/chapter-experimentation.aux
-
-LaTeX Warning: Label `sec: Simulation and Scenario Analysis' multiply defined.
-
-))
+(./ch-experimentation/chapter-experimentation.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 224.
-LaTeX Font Info:    ... okay on input line 224.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 225.
+LaTeX Font Info:    ... okay on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen135
-\scratchbox=\box35
-\nofMPsegments=\count133
-\nofMParguments=\count134
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen136
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count135
+\scratchdimen=\dimen145
+\scratchbox=\box37
+\nofMPsegments=\count136
+\nofMParguments=\count137
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen146
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -435,8 +482,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring OFF on input line 224.
+\AtBeginShipoutBox=\box38
+Package hyperref Info: Link coloring OFF on input line 225.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -444,11 +491,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count138
+\c@section@level=\count141
 )
-LaTeX Info: Redefining \ref on input line 224.
-LaTeX Info: Redefining \pageref on input line 224.
-LaTeX Info: Redefining \nameref on input line 224.
+LaTeX Info: Redefining \ref on input line 225.
+LaTeX Info: Redefining \pageref on input line 225.
+LaTeX Info: Redefining \nameref on input line 225.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
@@ -457,13 +504,13 @@ LaTeX Info: Redefining \nameref on input line 224.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 226.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 227.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 227.
  [2
 
 ]
@@ -526,7 +573,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=218, 620.3175
+</home/hrishi/work/thesis/pictures/implementation/clutter.png, id=255, 620.3175
 pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/clutter.png Graphic file
  (type png)
@@ -562,7 +609,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=316, 863.475
+</home/hrishi/work/thesis/pictures/implementation/coppito0.JPG, id=353, 863.475
 94pt x 586.44093pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0.JPG Graphic fil
 e (type jpg)
@@ -697,7 +744,7 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=375,
+</home/hrishi/work/thesis/pictures/implementation/coppito0building.png, id=412,
  620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/coppito0building.png Gra
 phic file (type png)
@@ -708,8 +755,8 @@ to0building.png used on input line 97.
 (pdftex.def)             Requested size: 372.19337pt x 582.68138pt.
 
 [23]
-</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=38
-5, 620.3175pt x 971.12813pt>
+</home/hrishi/work/thesis/pictures/implementation/simulationinaction.png, id=42
+2, 620.3175pt x 971.12813pt>
 File: /home/hrishi/work/thesis/pictures/implementation/simulationinaction.png G
 raphic file (type png)
 
@@ -720,7 +767,7 @@ ationinaction.png used on input line 104.
 
 [24 </home/hrishi/work/thesis/pictures/implementation/coppito0building.png>]
 [25 </home/hrishi/work/thesis/pictures/implementation/simulationinaction.png>]
-</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=398, 
+</home/hrishi/work/thesis/pictures/implementation/variableOptions.png, id=436, 
 196.735pt x 188.705pt>
 File: /home/hrishi/work/thesis/pictures/implementation/variableOptions.png Grap
 hic file (type png)
@@ -739,7 +786,7 @@ Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
 [27] [28] [29]
-</home/hrishi/work/thesis/pictures/implementation/block.png, id=436, 737.00343p
+</home/hrishi/work/thesis/pictures/implementation/block.png, id=473, 737.00343p
 t x 435.12563pt>
 File: /home/hrishi/work/thesis/pictures/implementation/block.png Graphic file (
 type png)
@@ -748,60 +795,175 @@ type png)
 Package pdftex.def Info: /home/hrishi/work/thesis/pictures/implementation/block
 .png used on input line 190.
 (pdftex.def)             Requested size: 368.50081pt x 217.56227pt.
- [30 </home/hrishi/work/thesis/pictures/implementation/block.png>])) [31]
+ [30 </home/hrishi/work/thesis/pictures/implementation/block.png>]) [31]) [32]
 \openout2 = `ch-experimentation/chapter-experimentation.aux'.
 
 
 (./ch-experimentation/chapter-experimentation.tex
 Chapter 4.
-[32
+[33
 
 
 
-] [33]
+] [34] [35]
+Missing character: There is no œ in font cmr12!
+Missing character: There is no Ñ in font cmr12!
+Missing character: There is no œ in font cmr12!
+Missing character: There is no Ñ in font cmr12!
 
-LaTeX Warning: Citation `ref23' on page 34 undefined on input line 38.
+Overfull \hbox (20.77011pt too wide) in paragraph at lines 86--87
+ [] 
+ []
 
-[34]) [35] (./thesis.bbl
+[36] [37]
+</home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png, id=54
+7, 912.40875pt x 564.1075pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png G
+raphic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Macro_Age
+nt_Simulation.png used on input line 97.
+(pdftex.def)             Requested size: 456.20326pt x 282.05305pt.
+
+Overfull \hbox (22.58327pt too wide) in paragraph at lines 97--98
+ [][] 
+ []
+
+[38 </home/hrishi/work/thesis/pictures/simulation/Macro_Agent_Simulation.png (P
+NG copy)>] [39]
+</home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agent_Simulation.p
+ng, id=565, 999.735pt x 623.32875pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agent_Simulat
+ion.png Graphic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agent_Simulati
+on.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Micro_vs_
+Macro_Agent_Simulation.png used on input line 165.
+(pdftex.def)             Requested size: 469.87552pt x 292.96455pt.
+
+Overfull \hbox (36.25552pt too wide) in paragraph at lines 165--166
+ [][] 
+ []
+
+[40] [41] [42 </home/hrishi/work/thesis/pictures/simulation/Micro_vs_Macro_Agen
+t_Simulation.png (PNG copy)>]
+Overfull \hbox (13.49873pt too wide) in paragraph at lines 224--225
+ [][] 
+ []
+
+
+Overfull \hbox (20.07281pt too wide) in paragraph at lines 264--265
+ [][] 
+ []
+
+[43]
+Overfull \hbox (26.71979pt too wide) in paragraph at lines 306--307
+ [][] 
+ []
+
+[44]
+</home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Agent_
+Simulation.png, id=590, 909.3975pt x 562.1pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_A
+gent_Simulation.png Graphic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Ag
+ent_Simulation.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Optimisti
+c_Graph_for_Macro_Agent_Simulation.png used on input line 313.
+(pdftex.def)             Requested size: 454.69765pt x 281.04932pt.
+
+Overfull \hbox (21.07765pt too wide) in paragraph at lines 313--314
+ [][] 
+ []
+
+[45]
+</home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_Agent
+_Simulation.png, id=596, 938.50626pt x 580.1675pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_
+Agent_Simulation.png Graphic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_A
+gent_Simulation.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Pessimist
+ic_Graph_for_Macro_Agent_Simulation.png used on input line 320.
+(pdftex.def)             Requested size: 469.25198pt x 290.08302pt.
+
+Overfull \hbox (35.63199pt too wide) in paragraph at lines 320--321
+ [][] 
+ []
+
+[46 </home/hrishi/work/thesis/pictures/simulation/Optimistic_Graph_for_Macro_Ag
+ent_Simulation.png (PNG copy)>]
+</home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_Evacua
+tion_Time_for_Micro_Agent_Simulation.png, id=601, 935.495pt x 578.16pt>
+File: /home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_E
+vacuation_Time_for_Micro_Agent_Simulation.png Graphic file (type png)
+
+<use /home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_Ev
+acuation_Time_for_Micro_Agent_Simulation.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/Pessimist
+ic_and_Optimistic_Evacuation_Time_for_Micro_Agent_Simulation.png used on input 
+line 327.
+(pdftex.def)             Requested size: 467.74635pt x 289.07928pt.
+
+Overfull \hbox (34.12636pt too wide) in paragraph at lines 327--328
+ [][] 
+ []
+
+[47 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_Graph_for_Macro_A
+gent_Simulation.png (PNG copy)>]
+</home/hrishi/work/thesis/pictures/simulation/summary.png, id=606, 971.63pt x 5
+90.205pt>
+File: /home/hrishi/work/thesis/pictures/simulation/summary.png Graphic file (ty
+pe png)
+ <use /home/hrishi/work/thesis/pictures/simulation/summary.png>
+Package pdftex.def Info: /home/hrishi/work/thesis/pictures/simulation/summary.p
+ng used on input line 334.
+(pdftex.def)             Requested size: 485.81381pt x 295.10178pt.
+
+Overfull \hbox (52.19382pt too wide) in paragraph at lines 334--335
+ [][] 
+ []
+
+) [48 </home/hrishi/work/thesis/pictures/simulation/Pessimistic_and_Optimistic_
+Evacuation_Time_for_Micro_Agent_Simulation.png (PNG copy)>] [49 </home/hrishi/w
+ork/thesis/pictures/simulation/summary.png (PNG copy)>] (./thesis.bbl
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ô in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [36
+ [50
 
 
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 258.
- [37]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 258.
- (./thesis.aux (./ch-intro/chapter-intro.aux) (./ch-pastwork/chapter-pastwork.a
-ux)
+]
+[51])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 259.
+ [52]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 259.
+ (./thesis.aux (./ch-intro/chapter-intro.aux)
+(./ch-pastwork/chapter-pastwork.aux)
 (./ch-implementation/chapter-implementation.aux)
 (./ch-experimentation/chapter-experimentation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 258.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 258.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 259.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 259.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: ECC10134AEC18C12CB738D314767D0FA;1681.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 258.
+(rerunfilecheck)             Checksum: F80EA1C825F0D8BD167E3B9C8D8DC4CC;1991.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 259.
  ) 
 Here is how much of TeX's memory you used:
- 7632 strings out of 493029
- 111665 string characters out of 6136234
- 204973 words of memory out of 5000000
- 10802 multiletter control sequences out of 15000+600000
+ 8449 strings out of 493029
+ 127186 string characters out of 6136234
+ 243140 words of memory out of 5000000
+ 11542 multiletter control sequences out of 15000+600000
  11358 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,30p,2134b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,16n,35p,2134b,541s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -812,10 +974,10 @@ s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmti12.pfb>
-Output written on thesis.pdf (47 pages, 1057312 bytes).
+Output written on thesis.pdf (62 pages, 1252652 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 171 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 710 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 205 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

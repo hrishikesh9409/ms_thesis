@@ -17,8 +17,10 @@
 \contentsline {section}{\numberline {3.2}PedSim Library Modules}{19}{section.3.2}
 \contentsline {section}{\numberline {3.3}Algorithm Description}{27}{section.3.3}
 \contentsline {section}{\numberline {3.4}Topology Formulation}{29}{section.3.4}
-\contentsline {chapter}{\numberline {4}Experimentation and Analysis}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Optimization through Constraints}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}Simulation and Scenario Analysis}{34}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}}{35}{subsection.4.2.1}
-\contentsline {chapter}{Bibliography}{36}{section*.8}
+\contentsline {chapter}{\numberline {4}Experimentation and Analysis}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Optimization through Constraints}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Simulation and Scenario Analysis}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Case 2: Run Time Comparison between Micro and Macro Agent Simulation}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Case 3: Congestion Dynamics and Flow Control}{43}{subsection.4.2.3}
+\contentsline {chapter}{Bibliography}{50}{section*.8}
