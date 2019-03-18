@@ -8,11 +8,17 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Real Time Variable Constraints in PedSim}}{26}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Groups of Cells Making a Block Structure}}{30}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Macro Agent Simulation - Optimized vs UnOptimized Algorithms}}{38}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Micro vs Macro Agent Simulation}}{42}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Optimistic Graph for Macro Agent Simulation}}{47}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Pessimistic Graph for Macro Agent Simulation}}{47}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Pessimistic and Optimistic Evacuation Time for Micro Agent Simulation}}{48}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}}{48}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}}{52}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}}{53}{figure.4.8}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Macro Agent Simulation - Optimized vs UnOptimized Algorithms}}{39}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Micro vs Macro Agent Simulation}}{43}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Optimistic Graph for Macro Agent Simulation}}{48}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pessimistic Graph for Macro Agent Simulation}}{48}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Pessimistic and Optimistic Evacuation Time for Micro Agent Simulation}}{49}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}}{49}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}}{53}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}}{54}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Pessimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}}{56}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}}{57}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}}{58}{figure.4.11}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

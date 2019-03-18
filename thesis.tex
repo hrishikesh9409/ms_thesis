@@ -20,6 +20,45 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\newcommand{\grayScale}{0.95} % Can change the gray level here
+\definecolor{codeBackground}{rgb}{\grayScale ,\grayScale ,\grayScale}
+\definecolor{forestGreen}{rgb}{0.13,0.55,0.13}
+
+\lstset{
+    language=C++,
+    backgroundcolor=\color{codeBackground}, 
+    tabsize=1,
+   % numbers=left,
+   % stepnumber=1,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    showtabs=false,
+    showspaces=false,
+    basicstyle=\linespread{1.1}\small\ttfamily,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    stringstyle=\color{red},
+    commentstyle=\color{gray},
+    numberstyle=\color{magenta},
+    morecomment=[l][\color{forestGreen}]{\#}
+}
+\lstset{literate=% Colors the digits
+   *{0}{{{\color{red!20!violet}0}}}1
+    {1}{{{\color{red!20!violet}1}}}1
+    {2}{{{\color{red!20!violet}2}}}1
+    {3}{{{\color{red!20!violet}3}}}1
+    {4}{{{\color{red!20!violet}4}}}1
+    {5}{{{\color{red!20!violet}5}}}1
+    {6}{{{\color{red!20!violet}6}}}1
+    {7}{{{\color{red!20!violet}7}}}1
+    {8}{{{\color{red!20!violet}8}}}1
+    {9}{{{\color{red!20!violet}9}}}1
+}
+
 \graphicspath{{/home/hrishi/work/thesis/pictures/}}
 
 
@@ -235,10 +274,10 @@
 \include{ch-pastwork/chapter-pastwork}
 \include{ch-implementation/chapter-implementation}
 \include{ch-experimentation/chapter-experimentation}
-% \include{ch-conclusion/chapter-conclusion}
-% \appendix % all chapters following will be labeled as appendices
-% \include{ch-appendicies/implementation}
-% \include{ch-appendicies/printing}
+\include{ch-conclusion/chapter-conclusion}
+\appendix % all chapters following will be labeled as appendices
+\include{ch-appendicies/implementation}
+\include{ch-appendicies/printing}
 
 
 % Make the bibliography single spaced

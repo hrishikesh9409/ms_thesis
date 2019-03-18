@@ -1,4 +1,4 @@
-\chapter{Experimentation and Analysis\label{ch:Experimentation and Analysis}}
+ \chapter{Experimentation and Analysis\label{ch:Experimentation and Analysis}}
 
 This chapter is intended to provide the experimental proof of the proposed extension of the previously formulated algorithm from \cite{ref5}. Through this chapter, the detailed explanation of the additional constraints that are added to the unoptimized algorithm from the previous chapter is provided. Next micro and macro agent simulations are presented pertaining to certain cases and scenarios to compare between the unoptimized and the optimized algorithms. The resulting observations and statistics are then presented for further analysis and the implications are then discussed.
 
@@ -14,7 +14,7 @@ From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for 
   \end{itemize}
   \item Definition of total area capacity and doors flow capacity constraints -congestion control
   \begin{itemize}
-  	\item The algorithm presented in section \ref{sec: Algorithm Description} unfortunately does not handle congestion. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
+  	\item The algorithm presented in section \ref{sec: Algorithm Description} unfortunately does not handle congestion as well as the proposed algorithm due to the simplistic constraints present. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
   \end{itemize}
   \item Simulating social attachment among some agents
   \begin{itemize}
@@ -35,7 +35,9 @@ This section contains the experimental analysis based on the scenarios that are 
 
 There are some properties that are common to scenarios. We follow similar topological constraints as given in \cite{ref5}. For instance, in the previous work presented, the cells are assumed to be isometric, i.e. the cells are bi-directional and can be crossed from any direction with the same amount of time. In the scenarios presented, the cells are assumed to be isometric as well.
 
-According to the work by Daamen et al. \cite{ref23}, door capacities are presented, where they are based on varying stress and composition levels of agents and he subesquently proposes an average of 2.8 persons per second for a 1 meter wide door $(p/m/s)$. In order to perform a statistical analysis and to remain coherent with the results with from \cite{ref5}, the door capacities and cell capacities are modeled after the presented stats in the aforementioned work. In \cite{ref5} the pessimistic and optimistic values considered are 1.03 $p/m/s$ and 3.23 $p/m/s$ respectively. This translates to a maximum of 5 people in pessimistic and a maximum of 16 people in optimistic situation can pass through a 1 meter wide door per slot time (5 seconds). Hence the same values will be considered here as well.
+According to the work by Daamen et al. \cite{ref23}, door capacities are presented, where they are based on varying stress and composition levels of agents and he subesquently proposes an average of 2.8 persons per second for a 1 meter wide door $(p/m/s)$. In order to perform a statistical analysis and to remain coherent with the results with from \cite{ref5}, the door capacities and cell capacities are modeled after the presented stats in the aforementioned work. In \cite{ref5} the pessimistic and optimistic values considered are 1.03 $p/m/s$ and 3.23 $p/m/s$ respectively. This translates to a maximum of 5 people in pessimistic and a maximum of 16 people in optimistic situation can pass through a 1 meter wide door per slot time (5 seconds). Hence the same values will be considered here as well. There are also a certain terms that are used in this section, namely, optimistic and pessimistic. Optimistic scenario assumes that no passageways and exits are blocked. Whereas pessimistic scenario assumes that 50\% of the emergency exits are blocked and passageways can accommodate only 5 people at a time. 
+
+The maximum number of people considered is 1008, as mentioned in \cite{ref5}. All the above conditions are compliant with the mentioned paper.
 
 \subsection{Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}
 \label{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}
@@ -384,8 +386,8 @@ The observational data from \cite{ref5} is used as a baseline reference in order
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{simulation/ideal_evacuation_along_shortest_paths.JPG}
-  \caption{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}
-  \label{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}
+  \caption{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}
+  \label{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}
 \end{figure}
 
 The above figure represents the number of people who can be evacuated within the given time frame for both pessimistic and optimistic cases, while simulating the whole scene for macro agent scenario. The pessimistic scenario runs for a total of 5 minutes and 35 seconds while the optimistic scenario runs for a total of 1 minute and 20 seconds. The figure below depict the cases for optimistic scenario that run on an macro agent model simulating an optimized algorithm for path routing.
@@ -397,4 +399,67 @@ The above figure represents the number of people who can be evacuated within the
   \label{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}
 \end{figure}
 
-Compared to the previous figure \ref{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents}, its immediately evident that evacuation required is longer and the number of agents that are not evacuated stays on for a longer period of time. This is with an increased capacity for the pathways since its the optimal scenario. The next graph depicts the simulation 
+Compared to the previous figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents} depicting the optimistic scenario, its immediately evident that evacuation required is longer compared to and the number of agents that are not evacuated stays on for a longer period of time. This is with an increased capacity for the pathways since its the optimal scenario. The simulation takes a total of 3 minutes and 15 seconds in order to evacuate all people to safety. Some of the inferences made are as follows:
+
+\begin{itemize}
+  \item The interesting result to note is at the end tails of both the graphs. The graph from figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents} shows that the agents that follow the shortest paths tend to be evacuated last compared to the agents that follow the ideal path scenario based on the computation of all path.
+  \item In the optimized macro agent case however, we observe that there is a shift from this pattern of behavior as agents that follow either path strategy have similar evacuation times. 
+  \item This is due to the fact that, in the results provided in \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}, the agents flow plainly till the third of the total evacuation time and then the agents that follow the shortest path strategy start to experience congestion, while the agents that follow all paths strategy can evacuate quicker.
+  \item This phenomenon is not experienced in the presented optimized macro agent scenario as depicted in \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation} as the computation time required for both shortest path and ideal paths are the same for very low number of agents and hence for very low number of agents the evacuation time required is similar.
+  \item This however becomes very different for very large number of agents and as it can be seen from the graph \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}, the curve becomes exponential ($O(N^2)$), for the all paths strategy and increases steadily as the number of agents increase.
+\end{itemize}
+
+The next step is to compare the differences in scaling between the pessimistic case for  macro agent model simulated using the unoptimized algorithm and the pessmisictic case for macro agent model running on the optimized algorithm. The prediction is that the rates of scaling will be very drastic as the pessimistic case reduces the flow capacity and also considers a few of the exits blocked. For the purposes of this experiment it was assumed that 2 out of 4 exits were blocked due to a static emergency like earthquake and hence the agents have to be re-routed to safety through the other exit points. This case is particularly interesting as congestions can be observed and how the agents tackle these congestions through predictive re-routing can be observed. 
+
+The next figure \ref{Pessimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation} presents the aforementioned case.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/Pessimistic_Macro.png}
+  \caption{Pessimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}
+  \label{Pessimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}
+\end{figure}
+
+
+The above represented graph typically confirms the previously described hypothesis in terms of scaling. As it can be observed quite clearly, the time required for the evacuation of agents in comparison to the figure \ref{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents} is almost 1.5 times the time required for the evacuation for the same case presented.
+
+The following are some inferences that are derived from the above graph:
+
+\begin{itemize}
+  \item Evidently the tail end of the graph for agents following the all paths strategy raises exponentially ($O(N^2)$)
+  \item The agents following the shortest paths strategy only increase linearly as the number of agents increase.
+  \item The implications of these scaling differences are especially important as it can be further broken and analyzed as to which of the constraints cause this peak in scaling. Upon further investigation into the particular constraint causing the computation time difference, it is found that changing the values of area capacity and flow capacity makes most of the difference.
+\end{itemize}
+
+The next two cases present the optimistic and the pessimistic cases of the micro agent model scenario.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/Optimistic_Micro.png}
+  \caption{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}
+  \label{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}
+\end{figure}
+
+The figure given above depicts an interesting scenario compared to its counter part - the pessimistic case as presented in \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}. Inferences from the given diagram will be presented below while discussing the following figure.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/Pessimistic_Micro.png}
+  \caption{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}
+  \label{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}
+\end{figure}
+
+
+The above two figures depict the interesting differences between the macro and micro agent simulation. As it can be observed from the figures \ref{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents} and \ref{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}, it takes longer than the macro agent model simulation in order to evacuate all the people to safety. The following inferences are presented in brief to compare and constrast between the obtained results:
+
+
+\begin{itemize}
+  \item It is interesting to note the opposite effect that occurs in \ref{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents} when compared to the results obtained from the optimistic case presented in the figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}.
+  \item In an optimistic scenario, due to higher capacity and a higher degree of resulting congestion avoidance, the shortest path algorithm functions more optimally compared to the all paths strategy.
+  \item This however becomes a more or less even total evacuation time as shown in figure \ref{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}. The contrast in the evacuation time occurs due to the following reason:
+    \begin{itemize}
+      \item During a pessimistic scenario, it is assumed that 50\% of the total emergency exits are inaccessible due to a static emergency blockade. Hence as the numbers dwindle the time differnence between shortest paths and the all paths strategy becomes one and the same. Hence this causes the noticeable difference between the two results given above. 
+    \end{itemize}
+\end{itemize}
+
+In summary it can drawn to a conclusion that the micro agent simulation with the all paths strategy takes the highest amount of time to evacuate, exhibiting a time complexity of $O(N^3)$. The macro agent model with the optimized algorithm takes a running time of $O(N^2)$.

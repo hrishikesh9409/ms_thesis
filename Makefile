@@ -2,10 +2,10 @@
 FILENAME = thesis
 
 all:
-	pdflatex $(FILENAME).tex
+	pdflatex -shell-escape $(FILENAME).tex 
 	bibtex $(FILENAME).aux
-	pdflatex $(FILENAME).tex
-	pdflatex $(FILENAME).tex
+	pdflatex -shell-escape $(FILENAME).tex
+	pdflatex -shell-escape $(FILENAME).tex
 
 run:
 	bibtex $(FILENAME)
