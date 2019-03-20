@@ -1,49 +1,118 @@
-\chapter{Implementation Details\label{ch:implementation}}
+\chapter{Scenario Definition\label{ch:Scenario Definition}}
 
-%% Appendices are just chapters, included after the $\backslash appendix$ command.
+This section is used to provide a brief technical description of the implementation details that are involved whilst defining a scenario for the simulation of pedastrian agents within the PedSim environment. The library modules are written entirely in C++ whilst the topology description is described within a .xml file. The simulation tool parses the xml file and graphically projects the topology onto the simulation environment for visual reference.
+The agent properties are also defined in the xml file such as their base speed, spawn location, total number of agents etc.
 
-%% \section{Switching Formats}
-%% When switching \texttt{printmode} on and off (see Section~\ref{sec:usage:options}), you may need to delete the output .aux files to get the document code to compile correctly. This is because the hyperref package is switched off for \texttt{printmode}, but this package inserts extra tags into the contents lines in the auxiliary files for PDF links, and these can cause errors when the package is not used.
+The section below provides an example of writing a topology description in the .xml file.
 
-%% \section{Long Tables}
+\section{Defining Topology}
 
-%% Long tables span multiple pages. By default they are treated like body text, but we want them to be single spaced all the time. The class therefore defines a new command, $\backslash tablespacing$, that is placed before a long table to switch to single spacing when the rest of the document is in double spacing mode. Another command, $\backslash bodyspacing$, is placed after the long table to switch back to double spacing. Normal tables using \texttt{tabular} automatically use single spacing and do not require the extra commands.
+The code snippet presented below depicts an example of defining the outline of the building, which was the topology used to run the simulations in. The dimensions of the building are strictly modeled according to the figure \ref{Coppito0 layout}. The dimensions have been scaled up to 5 times in order to suit the PedSim environment. A typical obstacle/wall description is defined as follows:
+\\
 
-%% When the documentclass is defined with the `singlespace' option, these commands are automatically adjusted to stay in single spacing after the long table.
+\begin{lstlisting}[language=xml]
+  <!-- Outer Walls -->
+  
+  <!-- TOP SIDE -->
+  <obstacle x1="-120" y1="-90" x2="-7.5" y2="-90" />
+  <obstacle x1="-7.5" y1="-90" x2="-7.5" y2="-60" />
+  <obstacle x1="-7.5" y1="-60" x2="7.5" y2="-60" />
+  <obstacle x1="7.5" y1="-60" x2="9.5" y2="-60" />
+  <obstacle x1="17.5" y1="-60" x2="30" y2="-60" />
+  <obstacle x1="30" y1="-60" x2="30" y2="-90" />
+  <obstacle x1="30" y1="-90" x2="120" y2="-90" />
 
-%% Make sure there is always at least one blank line after the $\backslash bodyspacing$ command before the end of the file.
+  <!-- RIGHT SIDE -->
+  <obstacle x1="120" y1="-90" x2="120" y2="-15" />
+  <obstacle x1="120" y1="-15" x2="105.5" y2="-15" />
+  <obstacle x1="97.5" y1="-15" x2="97.5" y2="75" />
 
-%% Some times long tables do not format correctly on the first pass. If the column widths are wrong, try running the \LaTeX compiler one or two extra times to allow it to better calculate the column widths.
-
-%% If you want your long table to break pages at a specific point, you can insert the command $\backslash pagebreak[4]$, to tell \LaTeX that it really should put a page break there. $\backslash pagebreak[2]$ gives it a hint that this is a good place for a page break, if needed. If there's a row that really should not be broken across a page, use $\backslash \backslash *$, which will usually prevent a pagebreak. 
-
-%% \section{Booktabs}
-%% The booktabs package is included to print nicer tables. See the package documentation~\cite{fear2005booktabs} for more details and motivation. Generally, all vertical lines are removed from the tables for a better visual appearance (so don't put them in), and better spacing and line thicknesses are used for the horizontal rules. The rules are defined as $\backslash toprule$ at the top of the table, $\backslash midrule$ in between the heading and the body of the table (or between sections of the table), and $\backslash bottomrule$ at the end of the table. $\backslash cmidrule$ can be used with the appropriate options to have a rule that spans only certain columns of the table.
-
-%% \section{Bibliography and Footnotes}
-
-%% The bibliography and any footnotes can also be single spaced, even for the electronic copy. The template is already setup to do this.
-
-%% Bibliography entries go in the .bib file. As usual, be sure to compile the \LaTeX code, then run BibTeX, and then run \LaTeX again.
-
-%% To cite websites and other electronically accessed materials, you can use the `@electronic' type of BibTeX entry, and use the `howpublished' field to include the URL of the source material.
-
-%% The formatting of bibliography entries will be done automatically. Usually the titles are changed to have only the first word capitalized. If you'd prefer to have your original formatting preserved, place the title in an extra set of curly braces, i.e., ``title = \{\{My title has an AcroNyM that should stay unchanged\}\},''.
-
-%% \section{Figures and Tables}
-%% The captions of figures and tables take an optional parameter in square brackets, specifying the caption text to be used in the Table of Contents. The regular caption in curly braces is used for the table itself.
-
-%% Generally captions for tables are placed above the table, while captions for figures are placed below the figure.
+  <!-- BOTTOM SIDE -->
+  <obstacle x1="97.5" y1="75" x2="7.5" y2="75" />
+  <obstacle x1="7.5" y1="75" x2="4.5" y2="75" />
+  <obstacle x1="-4.5" y1="75" x2="-7.5" y2="75" />
+  <obstacle x1="-7.5" y1="75" x2="-97.5" y2="75" />
+  <obstacle x1="-97.5" y1="75" x2="-97.5" y2="90" />
+  <obstacle x1="-97.5" y1="90" x2="-135" y2="90" />
 
 
-\begin{lstlisting}
-    #include<stdio.h>
-    #include<iostream>
-    // A comment
-    int main(void)
-    {
-      printf("Hello World\n");
-      return 0;
-    }
-\end{lstlisting}               
-       
+  <!-- LEFT SIDE -->
+  <obstacle x1="-135" y1="90" x2="-135" y2="-30" />
+  <obstacle x1="-135" y1="-30" x2="-112.5" y2="-30" />
+  <obstacle x1="-120" y1="-38" x2="-120" y2="-90" />
+
+\end{lstlisting}
+
+From the above code snippet, the x and y pair points are given for drawing straight lines.
+Partial and full agent pathing can be provided for the agents in order for them to start moving towards exit points during an emergency scenario.
+
+\begin{lstlisting}[language=xml]
+
+  <!-- waypoints are defined before agents  -->
+  
+  <waypoint id="w1" x="-75.0" y="-10" r="2" />
+  <waypoint id="w2" x="-61" y="-3" r="2" />
+  <waypoint id="w3" x="-50" y="-3" r="2" />
+  <waypoint id="w4" x="-40" y="-3" r="2" />
+  <waypoint id="w5" x="-30" y="-3" r="2" />
+  <waypoint id="w6" x="-7.5" y="-3" r="2" />
+  <waypoint id="w7" x="0" y="0" r="2" />
+  <waypoint id="w8" x="0" y="30" r="2" />
+  <waypoint id="w9" x="0" y="40" r="2" />
+  <waypoint id="w10" x="0" y="50" r="2" />
+  <waypoint id="w11" x="0" y="60" r="2" />
+  <waypoint id="w12" x="0" y="70" r="2" />
+  <waypoint id="w13" x="0" y="90" r="2" />
+
+  \end{lstlisting}
+
+The waypoint definition has coordianates x, y and radius r. The .xml file was written by referring the official documentation as provided in \cite{ref26}. Sample scenarios and tutorials regarding the same are also provided in the same documentation.
+
+The final step in completing the scenario description is to include the agent properties. Given below is a sample agent definition in xml:
+
+\begin{lstlisting}[language=xml]
+  <agent x="30" y="-30" n="10" dx="50" dy="50">
+  
+  \end{lstlisting}
+
+Where,
+\begin{itemize}
+\item $n$ is the number of agents.
+\item $x$ and $y$ are the spawn location of the agents within the topography of the environment.
+  \item dx and dy are used to determine the spread of the agents spawned. Agents are distributed evenly according to $x - dx$ and $x + dx$ and correspondingly along $y - dy$ and $y + dy$.
+  \end{itemize}
+
+Varying $n$ allows for defining the number of agents in a given group. This is particularly useful for the group simulation scenarios. In order to perform micro agent simulations, the $n$ is typically valued as 1. To summarize the agent definition, waypoints for the agents are defined in order to provide a more definitive pathing for the agents based on the spawn locations.
+
+For a micro agent simulation, the agent definition will be as follows:
+\\
+
+\begin{lstlisting}[language=xml]
+  
+  <agent x="30" y="-30" n="1" dx="50" dy="60">
+  <addwaypoint id="wu" />
+  <addwaypoint id="wd" />
+  <addwaypoint id="wz" />
+  </agent> 
+  <agent x="30" y="-30" n="1" dx="25" dy="30">
+  <addwaypoint id="wu" />
+  <addwaypoint id="wd" />
+  <addwaypoint id="wz" />
+  </agent> 
+  <agent x="30" y="-30" n="1" dx="94" dy="100">
+  <addwaypoint id="wu" />
+  <addwaypoint id="wd" />
+  <addwaypoint id="wz" />
+  </agent> 
+  <agent x="30" y="-30" n="1" dx="107" dy="112">
+  <addwaypoint id="wu" />
+  <addwaypoint id="wd" />
+  <addwaypoint id="wz" />
+  </agent>
+    
+\end{lstlisting}
+
+Once the scenario to be modeled is described in the .xml file as given in the above code snippets, the file is then parsed by the PedSim library modules. Once the data is parsed from the .xml file, the agents are spawned according to the provided definitions and then PedSim proceeds to simulate the agents along the general waypoints as configured from the previous file.
+
+The PedSim library modules are modified and extended in order to simulate the agents according to the algorithm present in \cite{ref5}. The technical details and description are provided in brief in the next section.
+ 

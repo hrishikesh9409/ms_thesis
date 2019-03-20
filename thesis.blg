@@ -7,7 +7,7 @@ A level-1 auxiliary file: ch-implementation/chapter-implementation.aux
 A level-1 auxiliary file: ch-experimentation/chapter-experimentation.aux
 A level-1 auxiliary file: ch-conclusion/chapter-conclusion.aux
 A level-1 auxiliary file: ch-appendicies/implementation.aux
-A level-1 auxiliary file: ch-appendicies/printing.aux
+A level-1 auxiliary file: ch-appendicies/impl2.aux
 The style file: plain.bst
 Database file #1: thesis.bib
 Warning--empty booktitle in ref1
@@ -16,45 +16,45 @@ Warning--empty year in ref18
 Warning--empty journal in ref17
 Warning--empty journal in ref4
 Warning--there's a number but no volume in ref25
-You've used 25 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            662 strings with 8952 characters,
-and the built_in function-call counts, 8971 in all, are:
-= -- 865
-> -- 476
+            667 strings with 9096 characters,
+and the built_in function-call counts, 9188 in all, are:
+= -- 887
+> -- 483
 < -- 6
-+ -- 192
-- -- 160
-* -- 666
-:= -- 1510
-add.period$ -- 78
-call.type$ -- 25
-change.case$ -- 155
++ -- 195
+- -- 162
+* -- 672
+:= -- 1547
+add.period$ -- 82
+call.type$ -- 26
+change.case$ -- 159
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 329
-empty$ -- 665
-format.name$ -- 160
-if$ -- 1853
+cite$ -- 32
+duplicate$ -- 336
+empty$ -- 687
+format.name$ -- 162
+if$ -- 1901
 int.to.chr$ -- 0
-int.to.str$ -- 25
+int.to.str$ -- 26
 missing$ -- 26
-newline$ -- 127
-num.names$ -- 54
-pop$ -- 156
+newline$ -- 133
+num.names$ -- 56
+pop$ -- 164
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 132
 quote$ -- 0
-skip$ -- 221
+skip$ -- 227
 stack$ -- 0
-substring$ -- 502
-swap$ -- 61
+substring$ -- 507
+swap$ -- 62
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
+type$ -- 102
 warning$ -- 6
-while$ -- 85
-width$ -- 27
-write$ -- 276
+while$ -- 87
+width$ -- 28
+write$ -- 288
 (There were 6 warnings)

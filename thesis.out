@@ -27,8 +27,7 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{4.2.4 Case 4: Shortest Path vs Ideal Path}{section.4.2}% 27
 \BOOKMARK [0][-]{chapter.5}{5 Conclusion}{}% 28
 \BOOKMARK [1][-]{section.5.1}{5.1 Future Work}{chapter.5}% 29
-\BOOKMARK [0][-]{appendix.A}{A Implementation Details}{}% 30
-\BOOKMARK [0][-]{appendix.B}{B Printing and Binding}{}% 31
-\BOOKMARK [1][-]{section.B.1}{B.1 Printing}{appendix.B}% 32
-\BOOKMARK [1][-]{section.B.2}{B.2 Binding}{appendix.B}% 33
-\BOOKMARK [0][-]{section*.8}{Bibliography}{}% 34
+\BOOKMARK [0][-]{appendix.A}{A Scenario Definition}{}% 30
+\BOOKMARK [1][-]{section.A.1}{A.1 Defining Topology}{appendix.A}% 31
+\BOOKMARK [0][-]{appendix.B}{B Simulation Implementation}{}% 32
+\BOOKMARK [0][-]{section*.8}{Bibliography}{}% 33

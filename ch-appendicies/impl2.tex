@@ -1,0 +1,357 @@
+\chapter{Simulation Implementation\label{ch:Simulation Implementation}}
+
+The evacuation of agents within the PedSim environment can be treated as a complex graph problem. Hence the data obtained from the scenario description from the .xml file is translated into a form that can be easily read by the computer as a graph. Since there are many constraints and levels to the topology description, a complex user defined data structure is instantiated to hold this in place.
+
+The PedSim modules have been extended in order to accommodate the topology to graph translation. Two new source files are made and included within the "src" folder. coppito.h and coppito.cpp extends the functionality of the existing PedSim modules in order translate the data. coppito.h defines the prototype for the various functions that are used to instantiate this complex user defined data type.
+
+The implementation is broken down into different modules and are presented as follows. The corresponding prototypes are defined in coppito.h. The first module is to divide the topology into cells. The following code snippet first defines the cell structure and then further expanded as data is populated into the corresponding cell structure. \\ \\
+
+\begin{lstlisting}
+  // Defining a vertex
+struct vertex{
+	double x;
+	double y;
+};
+ // Defining an edge
+struct edge{
+	double startx;
+	double starty;
+
+	double endx;
+	double endy;
+
+	bool wall;
+	bool door;
+};
+// Defining a cell structure
+struct cell_structure{
+	int cell_number;
+	int cell_next[8];
+	std::vector<edge> edge_line;
+	std::vector<std::vector<edge> > cell_outline;
+};
+\end{lstlisting}               
+
+The above user defined complex data structure is then used to store data which is given by the following snippet:
+
+\begin{lstlisting}
+void Coppito::divide_Cells(){
+
+	//BLOCK 0:
+	start.x = -120;
+	start.y = -90.0;
+
+	end[0].x = -7.5;
+	end[0].y = -90.0;
+
+	end[1].x = -7.5;
+	end[1].y = -60.0;
+
+	cell_structure_allocation(start, end, 2);
+
+	//print_cells();
+
+	//BLOCK 1:
+	start.x = 30.0;
+	start.y = -90.0;
+
+	end[0].x = 120.0;
+	end[0].y = -90.0;
+
+	end[1].x = 120.0;
+	end[1].y = -60.0;
+
+	cell_structure_allocation(start, end, 2);
+
+	//BLOCK 2:
+	start.x = -97.5;
+	start.y = -45.0;
+
+	end[0].x = -7.5;
+	end[0].y = -45.0;
+
+	end[1].x = -7.5;
+	//end[1].y = 0.0;
+	end[1].y = 30.0;
+
+	cell_structure_allocation(start, end, 2);
+}
+\end{lstlisting}
+
+For the ease of implementation, a cluster of cells is taken as a block. The exact number of cells that make up a single block varies. There are 18 blocks in total, as is mentioned previously in section \ref{sec: PedSim Library Modules}.
+The next module after cell division is wall inclusion module. This allows for the algorithm to distinguish cells that have walls and the cells that do not, and also to understand which sides of the four sides of a cell constitutes a wall. The complex data type which contains these list of walls in a cell is defined as the following:
+
+\begin{lstlisting}
+std::vector<std::vector<edge> > list_walls;
+\end{lstlisting}       
+
+The list\_walls is further constitutes the data structure
+\begin{lstlisting}
+std::vector<vertex> walls;
+\end{lstlisting}
+
+The wall inclusion snippet is further broken down into horizontal and vertical allocation. This is done so because vertical and horizontal walls have different dimensions. Given below is code for horizontal and vertical wall division, and finally invoking the wall\_inclusion module in order to obtain the list of walls.
+
+\begin{lstlisting}
+void Coppito::wall_division_vertical(std::vector<vertex> walls){
+	vertex s; //start wall vertex
+	vertex e; //end wall vertex
+	vertex t; //temp variable
+
+	s.x = walls[0].x;
+	s.y = walls[0].y;
+
+	t = s;
+
+	e.x = walls.back().x;
+	e.y = walls.back().y;
+
+	walls.clear();
+
+	//cout << t.x << "," << t.y << endl;
+	//cout << e.x << "," << e.y << endl;
+	int i = 0;
+	while(true){
+		if(t.y == e.y)
+			break;
+		else if(t.y != e.y && t.x == e.x){
+			t.x = s.x;
+			t.y = s.y;
+
+			//cout << t.x << "," << t.y << endl;
+		}
+
+		s.y = s.y + cell_width;
+		walls.push_back(t);
+		i++;
+	}
+	edge temp_edge;
+	int j = 1;
+	//cout << walls.size() << endl;
+	for(int i = 0; i < walls.size(); i++){
+		//cout << i << " : " << walls[i].x << "," << walls[i].y << endl;
+		if(walls[j].y != walls.back().y && walls[j].x == walls.back().x){
+			temp_edge.startx = walls[i].x;
+			temp_edge.starty = walls[i].y;
+			temp_edge.endx = walls[j].x;
+			temp_edge.endy = walls[j].y;
+
+			//cout << "(" << temp_edge.startx << "," << temp_edge.starty << ")" << " --> " << "(" << temp_edge.endx << "," << temp_edge.endy << ")" << endl;
+			
+			edge_wall.push_back(temp_edge);
+			j++;
+		}
+		else if(walls[j].x == walls.back().x && walls[j].y == walls.back().y){
+			temp_edge.startx = walls[i].x;
+			temp_edge.starty = walls[i].y;
+			temp_edge.endx = walls.back().x;
+			temp_edge.endy = walls.back().y;
+
+			//cout << "(" << temp_edge.startx << "," << temp_edge.starty << ")" << " --> " << "(" << temp_edge.endx << "," << temp_edge.endy << ")" << endl;
+
+			edge_wall.push_back(temp_edge);
+			break;
+		}
+	}
+
+	list_walls.push_back(edge_wall);
+	edge_wall.clear();
+}
+
+
+void Coppito::wall_division_horizontal(std::vector<vertex> walls){
+	vertex s; //start wall vertex
+	vertex e; //end wall vertex
+	vertex t; //temp variable
+
+	s.x = walls[0].x;
+	s.y = walls[0].y;
+
+	t = s;
+
+	e.x = walls.back().x;
+	e.y = walls.back().y;
+
+	walls.clear();
+
+	//cout << t.x << "," << t.y << endl;
+	//cout << e.x << "," << e.y << endl;
+	int i = 0;
+	while(true){
+		if(t.x == e.x)
+			break;
+		else if(t.x != e.x && t.y == e.y){
+			t.x = s.x;
+			t.y = s.y;
+
+			//cout << t.x << "," << t.y << endl;
+		}
+
+		s.x = s.x + cell_length;
+		walls.push_back(t);
+		i++;
+	}
+	edge temp_edge;
+	int j = 1;
+	//cout << walls.size() << endl;
+	for(int i = 0; i < walls.size(); i++){
+		//cout << i << " : " << walls[i].x << "," << walls[i].y << endl;
+		if(walls[j].x != walls.back().x && walls[j].y == walls.back().y){
+			temp_edge.startx = walls[i].x;
+			temp_edge.starty = walls[i].y;
+			temp_edge.endx = walls[j].x;
+			temp_edge.endy = walls[j].y;
+
+			//cout << "(" << temp_edge.startx << "," << temp_edge.starty << ")" << " --> " << "(" << temp_edge.endx << "," << temp_edge.endy << ")" << endl;
+			
+			edge_wall.push_back(temp_edge);
+			j++;
+		}
+		else if(walls[j].x == walls.back().x && walls[j].y == walls.back().y){
+			temp_edge.startx = walls[i].x;
+			temp_edge.starty = walls[i].y;
+			temp_edge.endx = walls.back().x;
+			temp_edge.endy = walls.back().y;
+
+			//cout << "(" << temp_edge.startx << "," << temp_edge.starty << ")" << " --> " << "(" << temp_edge.endx << "," << temp_edge.endy << ")" << endl;
+
+			edge_wall.push_back(temp_edge);
+			break;
+		}
+	}
+
+	list_walls.push_back(edge_wall);
+	edge_wall.clear();
+}
+
+void Coppito::wall_allocation(){
+	
+ //WALL DIVISION 1:
+	wv.x = 30.0;
+	wv.y = -90.0;
+
+	walls.push_back(wv);
+	
+	wv.x = 120.0;
+	wv.y = -90.0;
+
+	walls.push_back(wv);
+
+
+	wall_division_horizontal(walls);
+	walls.clear();
+
+	//WALL DIVISION 2:
+	wv.x = 120.0;
+	wv.y = -90.0;
+
+	walls.push_back(wv);
+	
+	wv.x = 120.0;
+	wv.y = -15.0;
+
+	walls.push_back(wv);
+
+
+	wall_division_vertical(walls);
+	walls.clear();
+}
+\end{lstlisting}
+
+The next module is called the door\_assignment module and is very similar to the last. This is included since not all walls are doors and any cell that has a side with a door must have a wall too. This makes the traversal of agents from one room to another or passageway to another smooth and efficient. 
+
+\begin{lstlisting}
+void Coppito::door_assignment(std::vector<vertex> doors){
+	edge temp_door;
+
+	temp_door.startx = doors[0].x;
+	temp_door.starty = doors[0].y;
+	temp_door.endx = doors.back().x;
+	temp_door.endy = doors.back().y;
+
+	doorway.push_back(temp_door);
+	list_doors.push_back(doorway);
+	doorway.clear();
+}
+
+void Coppito::door_allocation(){
+
+	//DOOR 0:
+	dr.x = -102.5;
+	dr.y = -60.0;
+
+	doors.push_back(dr);
+
+	dr.x = -97.5;
+	dr.y = -60.0; 
+
+	doors.push_back(dr);
+	door_assignment(doors);
+	doors.clear();
+}
+\end{lstlisting}
+
+
+The final module is the  graph\_formation module. It is an extremely complex module that tasks in combining all these data into a single extremely complex data structure module.
+
+\begin{lstlisting}
+void Coppito::graph_formation(){
+	temp_block = block;
+	for(int i = 0; i < block.size(); i++){
+		for(int j = 0; j < block[i].size(); j++){
+			int p = 0;
+			//cout << "Cell Number :" << block[i][j].cell_number << endl;
+			for(int k = 0; k < block[i][j].cell_outline.size(); k++){
+				for(int l = 0; l < 4; l++){
+					for(int a = 0; a < temp_block.size(); a++){
+						for(int b = 0; b < temp_block[a].size(); b++){
+							for(int c = 0; c < temp_block[a][b].cell_outline.size(); c++){
+								for(int d = 0; d < 4; d++){
+									if(block[i][j].cell_outline[k][l].startx == temp_block[a][b].cell_outline[c][d].endx && 
+										block[i][j].cell_outline[k][l].starty == temp_block[a][b].cell_outline[c][d].endy &&
+										block[i][j].cell_outline[k][l].endx == temp_block[a][b].cell_outline[c][d].startx &&
+										block[i][j].cell_outline[k][l].endy == temp_block[a][b].cell_outline[c][d].starty){
+										if(temp_block[a][b].cell_outline[c][d].wall != true){
+											if(block[i][j].cell_number != temp_block[a][b].cell_number){
+												block[i][j].cell_next[p] = temp_block[a][b].cell_number;
+												p++;
+											}
+										}
+										else if(temp_block[a][b].cell_outline[c][d].wall == true){
+											if(temp_block[a][b].cell_outline[c][d].door == true){
+												if(block[i][j].cell_number != temp_block[a][b].cell_number){
+												block[i][j].cell_next[p] = temp_block[a][b].cell_number;
+												p++;
+												}
+											}
+											else
+												continue;
+										}
+									}
+									else if(block[i][j].cell_outline[k][l].startx == temp_block[a][b].cell_outline[c][d].startx && 
+										block[i][j].cell_outline[k][l].starty == temp_block[a][b].cell_outline[c][d].starty &&
+										block[i][j].cell_outline[k][l].endx == temp_block[a][b].cell_outline[c][d].endx &&
+										block[i][j].cell_outline[k][l].endy == temp_block[a][b].cell_outline[c][d].endy){
+										if(temp_block[a][b].cell_outline[c][d].wall != true){
+											if(block[i][j].cell_number != temp_block[a][b].cell_number){
+												block[i][j].cell_next[p] = temp_block[a][b].cell_number;
+												p++;
+											}
+										}
+										else if(temp_block[a][b].cell_outline[c][d].wall == true){
+											if(temp_block[a][b].cell_outline[c][d].door == true){
+												if(block[i][j].cell_number != temp_block[a][b].cell_number){
+												block[i][j].cell_next[p] = temp_block[a][b].cell_number;
+												p++;
+												}
+											}
+											else
+												continue;
+}}}}}}}}}}}
+\end{lstlisting}
+
+
+These core modules make up the scenario for the simulation. Once the simulation scenario is defined as above, the simulation is then set to simulate with the additional constraints by tweaking the values as presented from the figure \ref{variableOptions}. Additional tutorial and  documentation with regards to PedSim and its library modules are available in official site \url{http://pedsim.silmaril.org/} 
+
+The full implementation of the above code is made publicly available in the following github link : \\
+\url{https://github.com/hrishikesh9409/Pedsim_Thesis/tree/master/coppito0}.

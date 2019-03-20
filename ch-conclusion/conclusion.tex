@@ -1,1 +1,15 @@
-In this work, we explain how to use the puthesis.cls class file and the accompanying template.  
+From the presented scenario and cases, it is quite evidently evaluated that micro agent simulation, optimized with the applied realistic constraints presents the most realistic approach to evacuation compared to the other cases. Based on this objective presentation, we can design topologies and evacuation systems that are better suited to accommodate the required crowd of pedastrians. Through this thesis, it is also shown how adding even a small constraint to the simulation can severely alter the overall evacuation time of the agents. The nature of these constraints and how they affect the overall evacuation performance of the agents helps us to be better prepared in the likelihood of an actual disaster event.    
+
+The present work employs a software architecture that helps improve and optimise the evacuation time which is very crucial in the case of an emergency. From the topology data obtained, it is pipelined into PedSim simulation environment. Once this data and the distribution of people is fed in to the system, the algorithm for evacuation provides a generic initial pathway to the agents and as time progresses, provides an alternate/optimal paths for various agents and suggest the paths suitable to each individual. This is achieved by dividing the floor plan first into blocks and subsequently into number of cells. The cells may have different orientations-horizontal and vertical. The paths are not allowed to cut through walls. The walls can be in any place even inside the rooms. Safe passage through the doors are then computed which connects to those to safe areas can then be computed. This modular nature of the algorithm makes it easy to scale the versions for future architecture and add more constraints by add-on modules. The simulation tool allows itself to upgraded to more generic pathing algorithm as well.  The following are the advantages that are due to the present simulation tool and the employed algorithm:
+
+\begin{itemize}
+\item All possible trajectories are computed.
+\item The optimal paths to safe areas are selected from the same.
+\item Regulates the flow as per the constraints to reduce congestions.
+\item Erratic and random  motions are reduced.
+\item Evacuation plan is made available to one and all.
+\item Simulation is carried out in design time, although monitoring the status of evacuation is done in real time.
+\item Can easily be integrated to IoT based framework.
+\item Optimal evacuation procedure model can be evolved from the resulting simulations.
+\end{itemize}
+

@@ -44,7 +44,9 @@
     stringstyle=\color{red},
     commentstyle=\color{gray},
     numberstyle=\color{magenta},
-    morecomment=[l][\color{forestGreen}]{\#}
+    morecomment=[l][\color{forestGreen}]{\#},
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space}
 }
 \lstset{literate=% Colors the digits
    *{0}{{{\color{red!20!violet}0}}}1
@@ -277,7 +279,7 @@
 \include{ch-conclusion/chapter-conclusion}
 \appendix % all chapters following will be labeled as appendices
 \include{ch-appendicies/implementation}
-\include{ch-appendicies/printing}
+\include{ch-appendicies/impl2}
 
 
 % Make the bibliography single spaced

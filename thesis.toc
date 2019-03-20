@@ -25,9 +25,8 @@
 \contentsline {subsection}{\numberline {4.2.3}Case 3: Congestion Dynamics and Flow Control}{44}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Case 4: Shortest Path vs Ideal Path}{51}{subsection.4.2.4}
 \contentsline {chapter}{\numberline {5}Conclusion}{60}{chapter.5}
-\contentsline {section}{\numberline {5.1}Future Work}{60}{section.5.1}
-\contentsline {chapter}{\numberline {A}Implementation Details}{61}{appendix.A}
-\contentsline {chapter}{\numberline {B}Printing and Binding}{62}{appendix.B}
-\contentsline {section}{\numberline {B.1}Printing}{62}{section.B.1}
-\contentsline {section}{\numberline {B.2}Binding}{63}{section.B.2}
-\contentsline {chapter}{Bibliography}{64}{section*.8}
+\contentsline {section}{\numberline {5.1}Future Work}{61}{section.5.1}
+\contentsline {chapter}{\numberline {A}Scenario Definition}{62}{appendix.A}
+\contentsline {section}{\numberline {A.1}Defining Topology}{62}{section.A.1}
+\contentsline {chapter}{\numberline {B}Simulation Implementation}{66}{appendix.B}
+\contentsline {chapter}{Bibliography}{77}{section*.8}
