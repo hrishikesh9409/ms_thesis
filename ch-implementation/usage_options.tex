@@ -183,7 +183,7 @@ The coppito source module divides the entire topology into such grids that are c
 
 The plot points that are stored into the .xml file is randomly plotted with the exception of the first starting point in order to facilitate a quicker render of the entire building. However for the processing of a cell based structure, this information cannot be random and hence the information is then once again converted to form a structured cell geometry.
 
-Thus a complex user defined data structure is defined to hold all this information in place. For the sake of convenience and optimal storage of data, the coppito 0 building is divided into regions called blocks. Each block contains a set number of cells and naturally have a variable number of cells. The whole topology is divided into 18 blocks and consists in total of 119 cells. Each cell is also of a specific dimension and has a certain cell length and a cell width. To understand what a block is, it can be easily explained diagrammatically as follows:
+Thus a complex user defined data structure is instantiated in order to hold all this information in place. For the sake of convenience and optimal storage of data, the coppito 0 building is divided into regions called blocks. Each block contains a set number of cells and naturally have a variable number of cells. The whole topology is divided into 18 blocks and consists in total of 119 cells. Each cell is also of a specific dimension and has a certain cell length and a cell width. To understand what a block is, it can be easily explained diagrammatically as follows:
 
 \begin{figure}[H]
   \centering
@@ -194,9 +194,9 @@ Thus a complex user defined data structure is defined to hold all this informati
 
 From the above figure \ref{block}, the red encircled circled area which includes the cells numbered 96, 85, 74, 63, 52, 97, 86, 75, 64, 53 form a block. Although a certain number of cells make up a block, the number of cells that make a block is often variable. Essentially one section of the topology is considered a block. This helps segregate different areas of the premises and identify them easily.
 
-Further decomposing the cell, subdivides it into 4 edge lines, each edge line further decomposes into 4 vertices, an end to end $x$ and $y$ plot points. Along with these information are stored if the edge lines are walls and if they incorporate doors. This is highly useful for creating a tree structure pattern for path finding, used by agents during evacuation simulation. The final complex structure that is defined to hold this cell structure is explained in detail in the Appendix section. In order to dynamically store the data of the cell information, the data structure used in place is a custom user defined 7 layered structure. 
+Further decomposing the cell, subdivides it into 4 edge lines, each edge line further decomposing into 4 vertices, an end to end $x$ and $y$ plot points. A flag is used to identify if the edge lines are walls and also if they incorporate doors. This is highly useful for creating a tree structure pattern for path finding, used by agents during evacuation simulation. The final complex structure that is defined to hold this cell structure is explained in detail in the Appendix section. In order to dynamically store the data of the cell information, the data structure used in place is a custom user defined 7 layered structure. 
 
-There are several sub-modules implemented in this custom made source file. The following are the following methods that are implemented as part of the module:
+There are several sub-modules implemented in this custom made source file. The following are methods that are implemented as part of the module:
 
 \begin{enumerate}
   \item divide\textunderscore cells
@@ -214,4 +214,4 @@ There are several sub-modules implemented in this custom made source file. The f
   \item print\textunderscore graph
 \end{enumerate}
 
-Further details regarding the technical and programmatic implementation of these modules are provided in the Appendix section of the thesis. The following section discusses the modification to the existing unoptimized algorithm from \cite{ref5}. The different simulation results comparing macro and micro agent simulations are presented and analyzed. The resulting the implications of these observations are discussed. 
+Further details regarding the technical and programmatic implementation of these modules are provided in the Appendix section \ref{ch:Simulation Implementation} of the thesis. The following section discusses the modification of the existing unoptimized simulation scenario from \cite{ref5}. The different simulation results comparing macro and micro agent scenarios are presented and analyzed. The resulting implications of these observations are discussed. 

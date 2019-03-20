@@ -20,13 +20,15 @@
 \contentsline {chapter}{\numberline {4}Experimentation and Analysis}{33}{chapter.4}
 \contentsline {section}{\numberline {4.1}Optimization through Constraints}{33}{section.4.1}
 \contentsline {section}{\numberline {4.2}Simulation and Scenario Analysis}{35}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}{36}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.1}Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Simulations}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Case 2: Run Time Comparison between Micro and Macro Agent Simulation}{40}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Case 3: Congestion Dynamics and Flow Control}{44}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Case 4: Shortest Path vs Ideal Path}{51}{subsection.4.2.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{60}{chapter.5}
-\contentsline {section}{\numberline {5.1}Future Work}{61}{section.5.1}
-\contentsline {chapter}{\numberline {A}Scenario Definition}{62}{appendix.A}
-\contentsline {section}{\numberline {A.1}Defining Topology}{62}{section.A.1}
-\contentsline {chapter}{\numberline {B}Simulation Implementation}{66}{appendix.B}
-\contentsline {chapter}{Bibliography}{77}{section*.8}
+\contentsline {subsubsection}{Statistical Purview of Gait Speeds Among People}{40}{section*.8}
+\contentsline {subsubsection}{Computation Time - Micro vs Macro Agent Simulation}{43}{section*.9}
+\contentsline {subsection}{\numberline {4.2.3}Case 3: Congestion Dynamics and Flow Control}{46}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Case 4: Shortest Path vs Ideal Path}{53}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{63}{chapter.5}
+\contentsline {section}{\numberline {5.1}Future Work}{64}{section.5.1}
+\contentsline {chapter}{\numberline {A}Scenario Definition}{65}{appendix.A}
+\contentsline {section}{\numberline {A.1}Defining Topology}{65}{section.A.1}
+\contentsline {chapter}{\numberline {B}Simulation Implementation}{69}{appendix.B}
+\contentsline {chapter}{Bibliography}{80}{section*.10}

@@ -1,5 +1,18 @@
 \begin{thebibliography}{10}
 
+\bibitem{ref27}
+{Fire safety in the workplace}.
+\newblock \url{https://www.gov.uk/workplace-fire-safety-your-responsibilities},
+  2019.
+\newblock [Online; accessed 15-03-2019].
+
+\bibitem{ref28}
+{Merseyside Fire and Rescue Service}.
+\newblock
+  \url{https://www.merseyfire.gov.uk/aspx/pages/protection/pdf/Calculating_Occupancy_assembly_buildings\_GT.pdf},
+  2019.
+\newblock [Online; accessed 15-03-2019].
+
 \bibitem{ref22}
 Sameera Abar, Georgios~K Theodoropoulos, Pierre Lemarinier, and Gregory~MP
   O’Hare.
@@ -140,6 +153,15 @@ Francesco Palmieri, Massimo Ficco, Silvio Pardi, and Aniello Castiglione.
 \newblock A cloud-based architecture for emergency management and first
   responders localization in smart city environments.
 \newblock {\em Computers \& Electrical Engineering}, 56:810--830, 2016.
+
+\bibitem{ref29}
+Eleanor~M. Simonsick, Luigi Ferrucci, Magdalena~I. Tolea, Antonio Terracciano,
+  Paul~T. Costa, Michael Griswold, Samer~S. Najjar, Angelo Scuteri, Barbara
+  Deiana, Marco Orrù, Manuela Uda, Marco Masala, and David Schlessinger.
+\newblock {Sex-Specific Correlates of Walking Speed in a Wide Age-Ranged
+  Population}.
+\newblock {\em The Journals of Gerontology: Series B}, 65B(2):174--184, 01
+  2010.
 
 \bibitem{ref21}
 Ashutosh Trivedi and Shrisha Rao.

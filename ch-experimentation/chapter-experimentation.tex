@@ -1,6 +1,6 @@
  \chapter{Experimentation and Analysis\label{ch:Experimentation and Analysis}}
 
-This chapter is intended to provide the experimental proof of the proposed extension of the previously formulated algorithm from \cite{ref5}. Through this chapter, the detailed explanation of the additional constraints that are added to the unoptimized algorithm from the previous chapter is provided. Next micro and macro agent simulations are presented pertaining to certain cases and scenarios to compare between the unoptimized and the optimized algorithms. The resulting observations and statistics are then presented for further analysis and the implications are then discussed.
+This chapter is intended to provide the experimental proof of the proposed extension of the previously formulated algorithm from \cite{ref5}. Through this chapter, the detailed explanation of the additional constraints that are added to the unoptimized simulation from the previous chapter is provided. Next micro and macro agent simulations are presented pertaining to certain cases and scenarios to compare between the unoptimized and the optimized simulations. The resulting observations and statistics are then presented for further analysis and the implications are then discussed.
 
 \section{Optimization through Constraints}
 \label{sec: Optimization through Constraints}
@@ -14,7 +14,7 @@ From the equations \ref{eq1}, \ref{eq2} and \ref{eq3}, the basic conditions for 
   \end{itemize}
   \item Definition of total area capacity and doors flow capacity constraints -congestion control
   \begin{itemize}
-  	\item The algorithm presented in section \ref{sec: Algorithm Description} unfortunately does not handle congestion as well as the proposed algorithm due to the simplistic constraints present. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
+  	\item The simulation present \cite{ref5}, unfortunately does not present the congestion scenario as well due to the simplistic constraints present. Providing additional constraint for area capacity, door flow capacity and passageway capacity can help reduce congestion and enable the re-routing of agents to alternate exits or routes in real time.
   \end{itemize}
   \item Simulating social attachment among some agents
   \begin{itemize}
@@ -39,14 +39,14 @@ According to the work by Daamen et al. \cite{ref23}, door capacities are present
 
 The maximum number of people considered is 1008, as mentioned in \cite{ref5}. All the above conditions are compliant with the mentioned paper.
 
-\subsection{Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}
-\label{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}
+\subsection{Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Simulations}
+\label{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Simulations}
 
-The first case is depicts the CPU run time comparison between macro agents(single or no group concept is present here) that follow the un-optimized algorithm from \cite{ref5} and the proposed extension of the mentioned algorithm. For the current scenario, pessimistic path scenario is incorporated in order to keep the coherency of results and perform the necessary comparisons with the aforementioned paper.
+The first case is depicts the CPU run time comparison between macro agents(single or no group concept is present here) that follow the optimized algorithm from \cite{ref5} against the proposed extension of the simulation by additional constraints. For the current scenario, pessimistic path scenario is incorporated in order to keep the coherency of results and perform the necessary comparisons with the aforementioned paper.
 
 A total of 1008 people are taken for the purposes of this simulation. Various walking speed scenarios among acquintances and friendly dyads are presented in the work by Wagnild et al. \cite{ref24}, however since there are no complex group formations that are currently part of the simulation, the speed of 1.2 $m/s$ estimated in J. Ye's average \textit{free flowing walking velocity} \cite{ref25} is used here.
 
-The original code for simulation was written on OPL language and solved on CPLEX version 12.8.0 \cite{ref5}. However codebase for the modified algorithm has since been translated to the PedSim environment. The following table \ref{Macro Agent Simulation - Optimized vs UnOptimized Algorithm} represents the simulation times between the optimized and the un-optimized algorithms.
+The original code for simulation was written on OPL language and solved on CPLEX version 12.8.0 \cite{ref5}. However codebase for the modified algorithm has since been translated to the PedSim environment. The following table \ref{Macro Agent Simulation - Optimized vs UnOptimized Simulation} represents the simulation times between the optimized and the un-optimized modeling scenarios.
  
 
 \begin{table}[H]
@@ -86,18 +86,16 @@ The original code for simulation was written on OPL language and solved on CPLEX
 \hline
 \end{tabular}}
 \end{adjustbox}
-\caption{Macro Agent Simulation - Optimized vs UnOptimized Algorithm}
-\label{Macro Agent Simulation - Optimized vs UnOptimized Algorithm}
+\caption{Macro Agent Simulation - Optimized vs UnOptimized Simulation}
+\label{Macro Agent Simulation - Optimized vs UnOptimized Simulation}
 \end{table}
 
-It should be mentioned that for the purposes of proper identication between the two scenarios in comparison, the simulation that runs with the constraints on the base algorithm is said to be running an optimized algorithm whereas the simulation without these constraints is said to be running on an un-optimized algorithm. 
-
-It is evident from the above figure that the optimized algorithm takes an exponential time to compute the simulation times for the macro agents at the given number of time steps. Below is a graphical description of the observed statistical values from the table \ref{Macro Agent Simulation - Optimized vs UnOptimized Algorithm}.
+It is evident from the above figure that the optimized algorithm takes an exponential time to compute the simulation times for the macro agents at the given number of time steps. Below is a graphical description of the observed statistical values from the table \ref{Macro Agent Simulation - Optimized vs UnOptimized Simulation}.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{simulation/Macro_Agent_Simulation.png}
-  \caption{Macro Agent Simulation - Optimized vs UnOptimized Algorithms}
+  \caption{Macro Agent Simulation - Optimized vs UnOptimized Simulation}
   \label{Macro Agent Simulation}
 \end{figure}
 
@@ -107,13 +105,44 @@ The above figure \ref{Macro Agent Simulation} depicts the difference in the perf
 \subsection{Case 2: Run Time Comparison between Micro and Macro Agent Simulation}
 \label{sec: Case 2: Run Time Comparison between Micro and Macro Agent Simulation}
 
-This case is similar in terms of objective to the previous case \ref{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}. However the key difference lies in what is compared in this particular scenario. Micro and macro agent simulation scenarios are compared in this case. Since there is micro agents that are also included, grouping constraints are included and subsequently varying velocities based on grouping and affiliation.
+This case is similar in terms of objective to the previous case \ref{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Simulations}. However the key difference lies in what is compared in this particular scenario. Micro and macro agent simulation scenarios are compared in this case. Since there is micro agents that are also included, grouping constraints are included and subsequently varying velocities based on grouping and affiliation.
 
-According to the work by Wagnild et al. \cite{ref24}, walking speeds are highly depend on the company and the lowest speed of the person present in the group. This scenario is inclusive of group constraints. However this scenario is also only to compare the actual running times of the simulated output. Complexities regarding group dynamics are not compared here. To keep the results coherent, the macro agents are considered with the uniform speed as mentioned in the previous section. The micro agents consists of mixed groups and individuals. To keep group velocity diversity among the micro agents, 20\% of the total number of micro agents are randomly distributed with varying speeds between the range of 0.7 $m/s$ and 1.5 $m/s$.   
+\subsubsection{Statistical Purview of Gait Speeds Among People}
+\label{sec: Statistical Purview of Gait Speeds Among People}
+To understand the how human walking speed impacts the simulation performance and the overall evacuation time, the work presented by Simonsick et al. \cite{ref29} is used as a baseline agent walking speed reference. The work presents an extensive statistical review on the walking speeds of people across all ages and sex. The walking speeds of people, according to Simonsick et al., is based on a variety of factors. These factors include not only a generic health purview and disabilities, but other social and psychological factors such as education and lifestyle. The factors that are taken into account are age, sex, education, marital status, smoker/non-smoking lifestyle, comorbidity, subjective health, waist circumference, height, neuroticism, extraversion openness, agreeableness, conscientiousness, systolic and diastolic BP, cholesterol levels, triglyceride levels, handgrip strength, averge walking activity per week etc. 
 
-The comparison values are based off on the pessimistic path scenario as presented in \cite{ref5}. A cross way comparison between macro agents with un-optimized algorithm, macro agents simulated with optimized algorithm and micro agent with constraints is tabulated in the table below. The CPU run time values for the microscopic agents that are simulated using the un-optimzed are obtained from the charted values from table 2.0 from the aforementioned paper, based on which the other two comparisons can be made and analyzed.
+The following statistical graphs were obtained based on their analysis and observations as given in \cite{ref29}:
 
-A total number of evacuees upto 1008 are considered for the comparisons, similar to the previous section \ref{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Algorithms}. 
+\begin{figure}[H]
+\subfloat[fig a]{\includegraphics[width = 3in]{simulation/1.png}} 
+\subfloat[fig b]{\includegraphics[width = 3in]{simulation/2.png}}\\
+\subfloat[fig c]{\includegraphics[width = 3in]{simulation/3.png}}
+\subfloat[fig d]{\includegraphics[width = 3in]{simulation/4.png}} 
+\caption{Walking Speed Statistics}
+\label{Walking Speed Statistics}
+\end{figure}
+
+The above figure presents the walking speeds of people based on a few of the aforementioned factors. According to the study, the age of 55 was considered as the inflection point for walking speed sensitivity. All the statistical models hence were modeled considering 55 as the age of inflection. Generally the study found out that women walked slower than men at all ages, with more pronounced variations after the age of 55. Younger women walked faster than the older women. According to the study, the walking speed varied from 0.7 to 1.2 $m/s$.
+
+Another study was performed by Wagnild et al. \cite{ref24}, and he determined that walking speeds are highly depend on the company and the lowest speed of the person present in the group. This scenario is inclusive of group constraints. However this scenario is also only to compare the actual running times of the simulated output. Complexities regarding group dynamics are not compared here. To keep the results coherent, the macro agents are considered with the uniform speed as mentioned in the previous section. The micro agents consists of mixed groups and individuals. 
+
+To present the impact of walking speeds in an evacuation scenario, the following graph depicts the evacuation time required in the case of variation of walking speeds of people who move slower than the average speed during an evacuation. In this scenario however, macra agent model is considered. The simulation trial is run with the same optimized algorithm from \cite{ref5}. The total number of agents considered in the following scenario is $N = 1008$.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{simulation/EvacuationTimevsAgentSpeedVariation.png}
+  \caption{Evacuation Time vs Agent Speed Variation}
+  \label{Evacuation Time vs Agent Speed Variation}
+\end{figure}
+
+In the given figure \ref{Evacuation Time vs Agent Speed Variation}, it is explicitly shown how walking speeds directly affect the total evacuation time of the agents during a disaster event.
+
+\subsubsection{Computation Time - Micro vs Macro Agent Simulation}
+\label{sec: Computation Time - Micro vs Macro Agent Simulation}
+
+The comparison values are based off on the pessimistic path scenario as presented in \cite{ref5}. A cross way comparison between macro agents with un-optimized simulation constraints, macro agents simulated with optimized constraints and micro agent with constraints is tabulated in the table below. The CPU run time values for the microscopic agents that are simulated using the un-optimzed are obtained from the charted values from table 2.0 from the aforementioned paper, based on which the other two comparisons can be made and analyzed. To keep group velocity diversity among the micro agents, 20\% of the total number of micro agents are randomly distributed with varying speeds between the range of 0.7 $m/s$ and 1.2 $m/s$.
+
+A total number of evacuees upto 1008 are considered for the comparisons, similar to the previous section \ref{sec: Case 1: Macro Agent Simulation Comparing Optimized and Un-Optimized Simulations}. 
 
 \begin{table}
 \centering
@@ -121,7 +150,7 @@ A total number of evacuees upto 1008 are considered for the comparisons, similar
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|l|} 
 \hline
-Evacuees & CPU Time (sec) - Micro Agent Sim:Optimized with Constraints & Evacuees & CPU Time (sec) - Micro Agent Sim:Optimized with Constraints  \\ 
+Evacuees & CPU Time (sec) - Macro Agent Sim:Optimized with Constraints & Evacuees & CPU Time (sec) - Micro Agent Sim:Optimized with Constraints  \\ 
 \hline
 20       & 0.4                                                         & 540      & 10.8                                                         \\
 40       & 0.46                                                        & 560      & 11.5                                                         \\
@@ -156,7 +185,7 @@ Evacuees & CPU Time (sec) - Micro Agent Sim:Optimized with Constraints & Evacuee
 \label{CPU Time Comparison between Micro and Macro Agent Simulation}
 \end{table}  
 
-As it can be noted from the above table \ref{CPU Time Comparison between Micro and Macro Agent Simulation}, the time taken for the micro agent simulation far exceeds the time taken by both the previous simulations - for macro agent using both optimized and un-optimized algorithms. However, it should be noted that the micro agent simulation has 20\% of the entire participants at a reduced movement speed, during each simulation run. Since the number of reduced movement speed agents increase exponentially for each trial run, so does the computation time. These agents who have reduced speeds are also randomized to form certain affliate bonds and groups. 
+As it can be noted from the above table \ref{CPU Time Comparison between Micro and Macro Agent Simulation}, the time taken for the micro agent simulation far exceeds the time taken by both the previous simulations - for macro agent model in both optimized and un-optimized simulations. However, it should be noted that the micro agent simulation has 20\% of the entire participants at a reduced movement speed, during each simulation run. Since the number of reduced movement speed agents increase exponentially for each trial run, so does the computation time. These agents who have reduced speeds are also randomized to form certain affliate bonds and groups. 
 
 More discussion on the nature of such groups and their implications are discussed in the next sub-section where the evacuation time is discussed in detail and simulations are run in order to observe the actual time taken due to the additional constraints.
 
@@ -200,7 +229,7 @@ The following table \ref{Emergency Exits Width vs Evacuation Time : Optimistic V
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|} 
 \hline
-Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic values for \\Unoptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for \\Optimized Algorithm\end{tabular}  \\ 
+Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic values for \\Unoptimized Simulation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ - \\Optimistic Values for \\Optimized Simulation\end{tabular}  \\ 
 \hline
 0.4                      & 45                                                                                                                  & 83                                                                                                                 \\
 0.5                      & 43                                                                                                                  & 79                                                                                                                 \\
@@ -243,7 +272,7 @@ Comparison between the pessimistic cases of optimized and the un-optimized cases
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|} 
 \hline
-    Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\UnOptimized Algorithm\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\Optimized Algorithm\end{tabular}  \\ 
+    Emergency Exit Width (m) & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\UnOptimized Simulation\end{tabular} & \begin{tabular}[c]{@{}l@{}}Evacuation Time Horizon $(\tau)$ -\\Pessimistic Values for \\Optimized Simulation\end{tabular}  \\ 
 \hline
 0.4                      & 120                                                                                                                 & 205                                                                                                                \\
 0.5                      & 105                                                                                                                 & 192                                                                                                                \\
@@ -351,11 +380,11 @@ The following series of graphs are a depiction of the above presented tables res
   \label{Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation}
 \end{figure}
 
-From the above figures, it is made abundantly clear that the shorter the exits, the more time it would take for the evacuees to evacuate during a disaster scenario. Though this seems like a trivial scenario to depict, it has some serious implications. The most important inference that can be made from the presented data is the derivation of how many people can effectively navigate through to an exit during a disaster scenario. The presented scenario compares the obtained statistical data to the reference figure 8 from \cite{ref5}.
+From the above figures, it is made abundantly clear that the shorter the width of the exits, the more time it would take for the evacuees to evacuate during a disaster scenario. Though this seems like a trivial scenario to depict, it has some serious implications. The most important inference that can be made from the presented data is the derivation of how many people can effectively navigate through to an exit during a disaster scenario. The presented scenario compares the obtained statistical data to the reference figure 8 from \cite{ref5}.
 
 It is also made clear that with more constraints and more realism, the statistical data shows that the congestion tends to increase as the evacuees tend to take longer and longer time to evacuate. Especially in the final scenario with the pessimistic values denoted for the micro model agent simulation, the evacuation time required to get all the agents to safety is exponential compared to the previous cases. The difference between pessimistic case and the optimal one is that in the optimistic case, only the shortest possible path towards the exit is considered. However, for the pessimistic case, all possible exit strategies are considered and hence the pessimistic case scenario should be considered whilst modeling a safe topology that caters for safe exit paths.
 
-It should also be mentioned that the social distances in the micro agent simulations are set according to the \href{https://www.gov.uk/workplace-fire-safety-your-responsibilities}{UK fire safety regulations} and the correponding guide given \href{https://www.merseyfire.gov.uk/aspx/pages/protection/pdf/Calculating_Occupancy_assembly_buildings_GT.pdf}{here}. The guide specifies that the maximum allowed density is 0.3 square meters per person, 0.5 for public houses, 0.8 for exhibition spaces, 1.0 for dining and 2.0 for sports areas etc. From \cite{ref5}, who also follows the same regulations, 1.25 persons per square meter is considered. Hence for this scenario, the social distances constraint is set accordingly. The area capacity constraints that are set throughout all these experiments are set according to these regulation standards. In our case, since its clearly mentioned that not more 6 are allowed within an office space, each room cannot hold more than 6 people at a single time.
+It should also be mentioned that the social distances in the micro agent simulations are set according to the UK fire safety regulations \cite{ref27} and the correponding guide given at \cite{ref28}. The guide specifies that the maximum allowed density is 0.3 square meters per person, 0.5 for public houses, 0.8 for exhibition spaces, 1.0 for dining and 2.0 for sports areas etc. From \cite{ref5}, who also follows the same regulations, 1.25 persons per square meter is considered. Hence for this scenario, the social distances constraint is set accordingly. The area capacity constraints that are set throughout all these experiments are set according to these regulation standards. In our case, since its clearly mentioned that not more 6 are allowed within an office space, each room cannot hold more than 6 people at a single time.
 
 Figure \ref{Emergency Exits Width vs Evacuation Time : Macro vs Micro Agent Simulation} presents a summary of all the congestion scenarios. The pessimistic values that are obtained from the micro agent scenario shows the difference in the exponentiation graphs where the time taken for evacuation exponentially increases with a time complexity of $O(N^3)$ as the width of the exits are decreased.  
 
@@ -381,7 +410,7 @@ However in order to make a realistic approach to simulation, all age groups shou
 
 In order to model the exact movement speed of an agent within the PedSim environment, the total time required to move an agent across the entire breadth of the topology recorded and then subsequently divided by the total time taken in order to calculate the average speed that is taken by the agent to traverse 1 $m$ of the topology. This then can be used to set variable speeds according to aforementioned constraints and then the scenario is run within the environment of PedSim. The following graphs depict the pessimistic and the optimistic values that are obtained as a result of the simulations. However, for macro agent scenario, a movement speed based on the normal distribution across all agents is set.
 
-The observational data from \cite{ref5} is used as a baseline reference in order to conduct the forthcoming simulations. The study is presented as follows:
+The observational data from \cite{ref5} is used as a baseline reference in order to conduct the forthcoming simulations. For proper analysis and comparison, the initial number of agents present are taken as the same, i.e. $N = 1008$. The study is presented as follows:
 
 \begin{figure}[H]
   \centering
@@ -390,7 +419,7 @@ The observational data from \cite{ref5} is used as a baseline reference in order
   \label{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}
 \end{figure}
 
-The above figure represents the number of people who can be evacuated within the given time frame for both pessimistic and optimistic cases, while simulating the whole scene for macro agent scenario. The pessimistic scenario runs for a total of 5 minutes and 35 seconds while the optimistic scenario runs for a total of 1 minute and 20 seconds. The figure below depict the cases for optimistic scenario that run on an macro agent model simulating an optimized algorithm for path routing.
+The above figure represents the number of people who can be evacuated within the given time frame for both pessimistic and optimistic cases, while simulating the whole scene for macro agent scenario. The pessimistic scenario runs for a total of 5 minutes and 35 seconds while the optimistic scenario runs for a total of 1 minute and 20 seconds. The figure below depict the cases for optimistic scenario that run on an macro agent model simulating an optimized scenario for path routing.
 
 \begin{figure}[H]
   \centering
@@ -403,13 +432,13 @@ Compared to the previous figure \ref{Ideal Evacuation vs Shortest Path Evacuatio
 
 \begin{itemize}
   \item The interesting result to note is at the end tails of both the graphs. The graph from figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents} shows that the agents that follow the shortest paths tend to be evacuated last compared to the agents that follow the ideal path scenario based on the computation of all path.
-  \item In the optimized macro agent case however, we observe that there is a shift from this pattern of behavior as agents that follow either path strategy have similar evacuation times. 
+  \item In the optimized macro agent case, we observe a similar trend where in the pattern of behavior as agents that follow either path strategy have similar evacuation times just like figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}. 
   \item This is due to the fact that, in the results provided in \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}, the agents flow plainly till the third of the total evacuation time and then the agents that follow the shortest path strategy start to experience congestion, while the agents that follow all paths strategy can evacuate quicker.
-  \item This phenomenon is not experienced in the presented optimized macro agent scenario as depicted in \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation} as the computation time required for both shortest path and ideal paths are the same for very low number of agents and hence for very low number of agents the evacuation time required is similar.
-  \item This however becomes very different for very large number of agents and as it can be seen from the graph \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}, the curve becomes exponential ($O(N^2)$), for the all paths strategy and increases steadily as the number of agents increase.
+  \item A similar phenomenon is experienced in the presented optimized macro agent scenario as depicted in \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation} as the computation time required for both shortest path and ideal paths are the same for very low number of agents and hence for very low number of agents the evacuation time required is similar. However since the start number of agents are very high, the shortest path strategy experience congestion and hence takes more evacuation time.
+  \item This however becomes very different for very large number of agents and as it can be seen from the graph \ref{Optimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation}, the curve becomes exponential ($O(N^2)$), for the shortest path strategy and increases steadily as the number of agents increase. The increase in number of agents cause higher congestion and hence the exponential increase in the evacuation time.
 \end{itemize}
 
-The next step is to compare the differences in scaling between the pessimistic case for  macro agent model simulated using the unoptimized algorithm and the pessmisictic case for macro agent model running on the optimized algorithm. The prediction is that the rates of scaling will be very drastic as the pessimistic case reduces the flow capacity and also considers a few of the exits blocked. For the purposes of this experiment it was assumed that 2 out of 4 exits were blocked due to a static emergency like earthquake and hence the agents have to be re-routed to safety through the other exit points. This case is particularly interesting as congestions can be observed and how the agents tackle these congestions through predictive re-routing can be observed. 
+The next step is to compare the differences in scaling between the pessimistic case for  macro agent model simulated in an unoptimized scenario and the pessmisictic case for macro agent model running on the optimized constraints scenario. The prediction is that the rates of scaling will be very drastic as the pessimistic case reduces the flow capacity and also considers a few of the exits blocked. For the purposes of this experiment it was assumed that 2 out of 4 exits were blocked due to a static emergency like earthquake and hence the agents have to be re-routed to safety through the other exit points. This case is particularly interesting as congestions can be observed and how the agents tackle these congestions through predictive re-routing can be observed. 
 
 The next figure \ref{Pessimistic Graph for Agent Evacuation Using Optimized Macro Agent Simulation} presents the aforementioned case.
 
@@ -421,13 +450,13 @@ The next figure \ref{Pessimistic Graph for Agent Evacuation Using Optimized Macr
 \end{figure}
 
 
-The above represented graph typically confirms the previously described hypothesis in terms of scaling. As it can be observed quite clearly, the time required for the evacuation of agents in comparison to the figure \ref{Ideal Evacuation vs Evacuation Along Shortest Path for Macro Agents} is almost 1.5 times the time required for the evacuation for the same case presented.
+The above represented graph typically confirms the previously described hypothesis in terms of scaling. As it can be observed quite clearly, the time required for the evacuation of agents in comparison to the figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents} is almost 1.5 times the time required for the evacuation for the same case presented.
 
 The following are some inferences that are derived from the above graph:
 
 \begin{itemize}
-  \item Evidently the tail end of the graph for agents following the all paths strategy raises exponentially ($O(N^2)$)
-  \item The agents following the shortest paths strategy only increase linearly as the number of agents increase.
+  \item Evidently the tail end of the graph for agents following the shortest path strategy raises exponentially ($O(N^2)$)
+  \item The agents following the all paths strategy only increase linearly as the number of agents increase.
   \item The implications of these scaling differences are especially important as it can be further broken and analyzed as to which of the constraints cause this peak in scaling. Upon further investigation into the particular constraint causing the computation time difference, it is found that changing the values of area capacity and flow capacity makes most of the difference.
 \end{itemize}
 
@@ -454,12 +483,12 @@ The above two figures depict the interesting differences between the macro and m
 
 
 \begin{itemize}
-  \item It is interesting to note the opposite effect that occurs in \ref{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents} when compared to the results obtained from the optimistic case presented in the figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}.
-  \item In an optimistic scenario, due to higher capacity and a higher degree of resulting congestion avoidance, the shortest path algorithm functions more optimally compared to the all paths strategy.
-  \item This however becomes a more or less even total evacuation time as shown in figure \ref{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}. The contrast in the evacuation time occurs due to the following reason:
+  \item It is important to note that the simulation performance changes that occur in \ref{Optimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents} when compared to the results obtained from the optimistic case presented in the figure \ref{Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Macro Agents}.
+  \item In an optimistic scenario, due to higher capacity and a higher degree of resulting congestion avoidance, the all paths strategy functions more optimally compared to its counter.
+  \item This however becomes a more or less even for about 3 quarters of the evacuation time as is shown in figure \ref{Pessimistic Case for Ideal Evacuation vs Shortest Path Evacuation Along Shortest Path for Micro Agents}. The contrast in the evacuation time occurs due to the following reason:
     \begin{itemize}
       \item During a pessimistic scenario, it is assumed that 50\% of the total emergency exits are inaccessible due to a static emergency blockade. Hence as the numbers dwindle the time differnence between shortest paths and the all paths strategy becomes one and the same. Hence this causes the noticeable difference between the two results given above. 
     \end{itemize}
 \end{itemize}
 
-In summary it can drawn to a conclusion that the micro agent simulation with the all paths strategy takes the highest amount of time to evacuate, exhibiting a time complexity of $O(N^3)$. The macro agent model with the optimized algorithm takes a running time of $O(N^2)$.
+In summary it can drawn to a conclusion that the micro agent simulation with the all paths strategy takes the highest amount of time to evacuate, exhibiting a time complexity of $O(N^3)$. The macro agent model simulated with additional constraints takes a running time of $O(N^2)$.
